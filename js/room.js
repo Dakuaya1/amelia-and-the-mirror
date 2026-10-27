@@ -93,7 +93,7 @@ function addShelf(group, materials) {
 }
 
 // ---- the room -----------------------------------------------------------------
-export function buildRoom(renderer, { withMirror = true } = {}) {
+export function buildRoom(renderer, { withMirror = true, shadowSize = 2048 } = {}) {
   const group = new THREE.Group();
 
   // Photographed surfaces (Poly Haven, CC0); tinted down to the study's lamplight.
@@ -229,7 +229,7 @@ export function buildRoom(renderer, { withMirror = true } = {}) {
   lampLight.position.set(-1.55, 1.1, -0.55); // world position of the bulb at the end of the arm
   lampLight.target.position.set(0.0, 0, 0.05);
   lampLight.castShadow = true;
-  lampLight.shadow.mapSize.set(2048, 2048); // crisp contact shadow under the book's boards
+  lampLight.shadow.mapSize.set(shadowSize, shadowSize); // crisp contact shadow under the book's boards (1024 on phones)
   lampLight.shadow.bias = -0.00035;
   lampLight.shadow.normalBias = 0.02;
   lampLight.shadow.camera.near = 0.3;

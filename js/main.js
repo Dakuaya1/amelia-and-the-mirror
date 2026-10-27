@@ -24,6 +24,7 @@ import { prepareSkies, onModelLoaded } from './assets.js';
 import { TextFx } from './text-fx.js';
 import { Warp, Hud } from './scifi.js';
 import { ReadingClock, Odometer, gearSvg } from './machine.js';
+import { DESKTOP_CLASS } from './device.js';
 
 const BASE = './';
 // ?lite drops bloom, vignette and the mirror reflection: a fallback for weak GPUs.
@@ -161,29 +162,26 @@ async function loadAssets() {
   const [front, back, spine] = await Promise.all([cover('front.jpg'), cover('back.jpg'), cover('spine.jpg')]);
   // The showcased chapters' plates: the painting the reader is about to step into, printed
   // on the left-hand page, with the moment it shows as its caption.
+  // These load behind the opening rather than before it (a phone on a slow connection would
+  // otherwise wait for 40 pictures it will not see for minutes): each chapter's page is drawn
+  // again when its picture arrives (see arrived, below).
   const plates = new Map();
-  await Promise.all(
-    SHOWCASE.map(async (k) => {
-      try {
-        const img = await loadImage(`assets/illus/ch${String(k).padStart(2, '0')}/${PLATES[k]}.webp`);
-        plates.set(k, { img, caption: SCENES[k][WORLDS[k].captions[0]].title });
-      } catch {
-        // no painting: the page keeps the chapter's panel
-      }
-    }),
-  );
   const panels = new Map();
-  await Promise.all(
-    CHAPTERS.map(async (c) => {
-      if (!c.panel) return;
-      try {
-        panels.set(c.num, await loadImage(`${BASE}textures/panels/${c.panel}`));
-      } catch {
-        // Missing illustration: the page keeps its text.
-      }
-    }),
-  );
-  return { textures: { front, back, spine }, panels, plates };
+  const arrived = []; // promises of chapter numbers whose picture has come in
+  for (const k of SHOWCASE) {
+    arrived.push(loadImage(`assets/illus/ch${String(k).padStart(2, '0')}/${PLATES[k]}.webp`).then((img) => {
+      plates.set(k, { img, caption: SCENES[k][WORLDS[k].captions[0]].title });
+      return k;
+    }, () => null)); // no painting: the page keeps the chapter's panel
+  }
+  for (const c of CHAPTERS) {
+    if (!c.panel) continue;
+    arrived.push(loadImage(`${BASE}textures/panels/${c.panel}`).then((img) => {
+      panels.set(c.num, img);
+      return c.num;
+    }, () => null)); // missing illustration: the page keeps its text
+  }
+  return { textures: { front, back, spine }, panels, plates, arrived };
 }
 
 // ---- copy: one block per beat, cued by scrollcraft on the act's progress ----
@@ -455,7 +453,8 @@ async function main() {
   const canvas = document.getElementById('scene3d');
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
   // Resolution starts at up to 1.25x and steps down if frames run slow (see frame()).
-  let pixelRatio = Math.min(window.devicePixelRatio, 1.25);
+  // (phones start at one pixel per point: their screens are dense and their GPUs share the battery)
+  let pixelRatio = Math.min(window.devicePixelRatio, DESKTOP_CLASS ? 1.25 : 1);
   renderer.setPixelRatio(pixelRatio);
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -474,12 +473,14 @@ async function main() {
   scene.environment = studioEnvironment(renderer);
   scene.environmentIntensity = 0.55;
 
-  const room = buildRoom(renderer, { withMirror: !LITE });
+  const room = buildRoom(renderer, { withMirror: !LITE && DESKTOP_CLASS, shadowSize: DESKTOP_CLASS ? 2048 : 1024 });
   scene.add(room.group);
 
   // The book lies flat on the desk: its cover faces up, its spine runs left.
   const book = new Book({ textures: assets.textures, renderPage: (page, scale) => renderPage(page, assets, scale) });
   book.setRenderer(renderer);
+  // a chapter's picture page (page 2n for chapter n) is drawn again once its picture is in
+  for (const p of assets.arrived) p.then((n) => { if (n) book.invalidatePage(2 * n); });
   const bookPose = new THREE.Group();
   bookPose.rotation.x = -Math.PI / 2;
   bookPose.position.set(0, BOOK_Y, 0);
@@ -588,21 +589,37 @@ async function main() {
     else window.scrollTo({ top: y, behavior: 'smooth' });
   });
 
+  // The canvases fill the stage, which on a phone is the screen's full height (index.html: 100lvh).
+  // Its size does not change as the address bar slides in and out while scrolling, so neither do
+  // the canvases: no costly resize mid-scroll, no frame cleared to black, no stretched picture.
+  const stage = canvas.parentElement;
+  let stageW = window.innerWidth;
+  let stageH = window.innerHeight;
+  let sizedW = 0;
+  let sizedH = 0;
+  let sizedRatio = 0;
   const onResize = () => {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
+    measure();
+    const w = stage.clientWidth || window.innerWidth;
+    const h = stage.clientHeight || window.innerHeight;
+    stageW = w;
+    stageH = h;
+    if (w === sizedW && h === sizedH && pixelRatio === sizedRatio) return;
+    sizedW = w;
+    sizedH = h;
+    sizedRatio = pixelRatio;
     renderer.setSize(w, h, false);
     composer.setPixelRatio(pixelRatio);
     composer.setSize(w, h);
     lens.uniforms.uRes.value.set(w * pixelRatio, h * pixelRatio);
     lens.uniforms.uMaxPx.value = 9 * pixelRatio;
-    bloom.setSize(w, h);
+    // (the glow is soft: phones draw it at half resolution)
+    bloom.setSize(DESKTOP_CLASS ? w : w / 2, DESKTOP_CLASS ? h : h / 2);
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     inside.setPixelRatio(pixelRatio);
     inside.setSize(w, h);
     warp.setSize(w, h, pixelRatio);
-    measure();
   };
   window.addEventListener('resize', onResize);
 
@@ -724,8 +741,8 @@ async function main() {
     warpVel += (Math.min(1, scrolled / dt / 1400) - warpVel) * Math.min(1, dt * 5);
 
     const t = now / 1000;
-    const W = window.innerWidth;
-    const H = window.innerHeight;
+    const W = stageW;
+    const H = stageH;
     const p = clamp01((window.scrollY - actTop) / actRange);
     const u = p * timeline.total;
     const seg = segAt(u);
@@ -811,7 +828,10 @@ async function main() {
     camera.lookAt(look);
     // Wide layouts: open, the book moves left, leaving room for the copy.
     const shiftX = wide ? W * 0.2 * cover * (1 - dive) : 0;
-    camera.setViewOffset(W, H, shiftX, 0, W, H);
+    // Narrow screens: once open, the book rises into the upper part of the screen, leaving the
+    // lower part to its caption (instead of a band of dark wall above and the copy over the pages).
+    const shiftY = wide ? 0 : H * 0.13 * cover * (1 - dive);
+    camera.setViewOffset(W, H, shiftX, shiftY, W, H);
     camera.updateMatrixWorld();
 
     // ---- portal: the inside world opens out of the picture ----
@@ -914,7 +934,7 @@ async function main() {
           aimAO(ao, renderPass.scene, renderPass.camera, world === 'manor' ? 0.6 : 0.12);
           // the lens: focused on what the camera looks at; wider while the book lies open
           const lensAmt = world === 'manor' ? 0 : (1 - smoothstep(0, 0.3, dive)) * (cover > 0.5 ? 0.8 : 1);
-          lens.enabled = lensAmt > 0.01;
+          lens.enabled = DESKTOP_CLASS && lensAmt > 0.01; // (phones go without: too costly for a subtle effect)
           if (lens.enabled) {
             lensFocus.copy(look).project(camera);
             lens.uniforms.uFocus.value.set((lensFocus.x + 1) / 2, (lensFocus.y + 1) / 2);

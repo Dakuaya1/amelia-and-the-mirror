@@ -97,6 +97,12 @@
 
   /* The pinned stage: the 3D book fills it, the copy sits over it. */
   .stage { overflow: hidden; }
+  /* Phones: the stage reaches the screen's full height (100lvh, the height with the address bar
+     tucked away), so scrolling, which slides the bar away, never uncovers a strip below it; the
+     3D canvases are sized to it once (main.js) instead of on every move of the bar. The copy keeps
+     to the height that is always visible (100svh), so the bar never covers a caption.
+     On a desktop the three heights are the same. */
+  .sc-stage.stage { height: 100vh; height: 100lvh; }
   #scene3d {
     position: absolute;
     inset: 0;
@@ -106,7 +112,9 @@
   }
   .copy-layer {
     position: absolute;
-    inset: 0;
+    inset: 0 0 auto 0;
+    height: 100vh;
+    height: 100svh;
     pointer-events: none;
   }
 
@@ -853,7 +861,7 @@
   .odo__strip { display: block; white-space: pre; text-align: center; line-height: 1.32em; will-change: transform; transition: transform 0.55s cubic-bezier(0.3, 1.5, 0.5, 1); }
 
   /* the winding key under the frontispiece: it ratchets round, and turns as the page starts to scroll */
-  .windup { position: absolute; left: 50%; bottom: clamp(1rem, 3.5vh, 2.2rem); translate: -50% 0; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+  .windup { position: absolute; left: 50%; top: calc(100svh - clamp(4.6rem, 10vh, 5.6rem)); translate: -50% 0; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
   body.is-ready .windup { opacity: 1; transition-delay: 2.4s; }
   body.is-past-hero .windup { opacity: 0; transition-delay: 0s; }
   .windup__key { width: 58px; height: 31px; overflow: visible; will-change: transform; filter: none; animation: windup 2.6s cubic-bezier(0.5, 0, 0.3, 1) infinite; rotate: calc(var(--spin, 0) * 3deg); }
@@ -888,8 +896,7 @@
 
   @media (max-width: 860px) {
     .odo { display: none; }
-    .windup { bottom: 0.8rem; }
-    .windup__text { font-size: 9px; }
+    .windup { display: none; } /* the phone frontispiece fills the screen: no room under it */
   }
   @media (prefers-reduced-motion: reduce) {
     .windup__key, .fx-gear, .finale__wheel, .chapters:not([hidden]) .toc__gear { animation: none; rotate: none; }

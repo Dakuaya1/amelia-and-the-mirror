@@ -366,7 +366,8 @@ export class Inside {
     this.renderer.setSize(w, h, false);
     this.composer.setPixelRatio(this.renderer.getPixelRatio());
     this.composer.setSize(w, h);
-    this.bloom.setSize(w, h);
+    // (the glow is soft: phones draw it at half resolution)
+    this.bloom.setSize(DESKTOP_CLASS ? w : w / 2, DESKTOP_CLASS ? h : h / 2);
     this.grade.uniforms.uRes.value.set(w, h);
     this.warp.uniforms.uAspect.value = w / h;
     this.camera.aspect = w / h;

@@ -564,6 +564,16 @@ export class Book {
     mesh.userData.hi = Boolean(this.cache.get(page)?.hi);
   }
 
+  /** Forget a page's drawing (its picture has just arrived): it is drawn again the next time it is needed. */
+  invalidatePage(page) {
+    const e = this.cache.get(page);
+    if (e) {
+      this.retire(e.tex);
+      this.cache.delete(page);
+    }
+    for (const m of [...this.leafFront, ...this.leafBack]) if (m.userData.page === page) m.userData.page = undefined;
+  }
+
   queuedHi(page) {
     return this.queue.some((x) => x.page === page && x.hi);
   }

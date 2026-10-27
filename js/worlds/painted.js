@@ -10,6 +10,9 @@ import * as THREE from 'three';
 import * as K from './kit.js';
 
 const loader = new THREE.TextureLoader();
+// On a phone a painting's height is this many screen heights: the screen, plus the 14% the view is
+// lifted to keep the subject above the caption (inside.js), at both ends, with a little to spare.
+const PHONE_COVER = 1.32;
 
 /** Camera beats for a painted chapter: small drifts from side to side round z ~ 3 (the parallax). */
 export function driftBeats(count) {
@@ -213,7 +216,9 @@ export function paintedWorld({ dir, meta, paintings, beats, background = 0x0b090
           // framed by hand: this much of its width in view (or, for a tall painting, of its
           // height: showH), centred on its subject
           k = p.showH ? (viewH * 1.04) / p.showH : (viewW * 1.06) / ((p.show ?? 0.75) * aspect);
-          if (viewA < 1 && aspect >= 1) k = viewH * 0.62; // phones: a wide painting takes most of the height and pans across
+          // phones: the painting covers the whole screen (with room for the view's lift above the
+          // caption, inside.js) and pans across; the caption sits over its foot on a dark band
+          if (viewA < 1 && aspect >= 1) k = viewH * PHONE_COVER;
           cx = ((viewA < 1 && p.subject ? p.subject[0] : p.focus[0]) - 0.5) * aspect;
           cy = 0.5 - p.focus[1];
           panX = viewA < 1 && aspect >= 1 ? Math.max(0, aspect * k - viewW) / 2 / k * sweep * 0.9 : (p.sweep ?? 0.05) * aspect * sweep;
@@ -232,15 +237,15 @@ export function paintedWorld({ dir, meta, paintings, beats, background = 0x0b090
             // own blurred colours either side; a wide one covers the screen and pans
             k = shape < viewA * 0.8 ? (viewH * 1.02) / bh : Math.min(cover, (viewW * 2) / bw, (viewH * 2) / bh);
           } else {
-            // phones: a narrow painting fits the width (or the height, if taller); a wide one takes
-            // most of the height and pans across
-            k = shape < 1.1 ? Math.min((viewW * 1.08) / bw, (viewH * 0.96) / bh) : Math.min(cover, Math.max((viewW * 1.6) / bw, (viewH * 0.62) / bh));
+            // phones: every painting covers the whole screen, so no dark band shows round it (the
+            // caption sits over its foot on its own dark band); a wide one pans across
+            k = Math.max((viewW * 1.06) / bw, (viewH * PHONE_COVER) / bh);
           }
           const mid = m.c ? [(m.c[0] + (core[0] + core[2]) / 2) / 2, (m.c[1] + (core[1] + core[3]) / 2) / 2] : [(core[0] + core[2]) / 2, (core[1] + core[3]) / 2];
           cx = (mid[0] - 0.5) * aspect;
           cy = 0.5 - mid[1]; // measured from the top
           panX = Math.max(0, bw * k - viewW) / 2 / k * sweep * 0.92;
-          panY = -Math.max(0, bh * k - viewH) / 2 / k * sweep * 0.6;
+          panY = viewA < 1 ? 0 : -Math.max(0, bh * k - viewH) / 2 / k * sweep * 0.6;
           if (viewA < 1 && shape >= 1.1 && p.subject) {
             // a phone sees a slice of a wide painting: centre the slice on its subject, drifting a little
             cx = (p.subject[0] - 0.5) * aspect;
