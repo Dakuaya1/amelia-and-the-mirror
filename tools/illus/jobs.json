@@ -1,0 +1,68 @@
+[
+ {
+  "chapter": "ch01",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 01",
+  "items": {
+   "table": "3 the long table.png",
+   "landing": "2 the chair on the landing.png",
+   "attic": "5 the string across the attic.png",
+   "mirror": "6 the mirror in the clean room.png"
+  }
+ },
+ {
+  "chapter": "ch04",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 04",
+  "items": {
+   "trunk": "1 the trunk marked ADAM.png",
+   "photo": "2 the photograph on the back step.png",
+   "glass": "5 the hands on the glass.png",
+   "sky": "6 the sky with no horizon.png"
+  }
+ },
+ {
+  "chapter": "ch10",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 10",
+  "items": {
+   "wheel": "1 the wheel.png",
+   "table": "2 the back table.png",
+   "run": "3 the first run.png",
+   "hill": "5 up the one in eight.png"
+  }
+ },
+ {
+  "chapter": "ch18",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 18",
+  "items": {
+   "workshop": "2 the workshop.png",
+   "glass": "3 the glass.png",
+   "ship": "5 the ship.png"
+  }
+ },
+ {
+  "chapter": "ch22",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 22",
+  "items": {
+   "lake": "1 the lake.png",
+   "lamps": "4 the lamps by the lake.png",
+   "shelf": "5 the shelf of the compound.png"
+  }
+ },
+ {
+  "chapter": "ch29",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 29",
+  "items": {
+   "vault": "1 the blast in the vault.png",
+   "valley": "7 the narha in the valley.png"
+  }
+ },
+ {
+  "chapter": "ch32",
+  "dir": "/Users/priyanshu-ai/Amelia and the Mirror/Amelia/Final files for Editing/Visual Samples/artwork/Chapter 32",
+  "items": {
+   "stair": "1 the dark stair.png",
+   "keeps": "3 the stair that keeps going.png",
+   "glassout": "4 the glass goes out.png",
+   "anna": "7 anna on the sill.png"
+  }
+ }
+]

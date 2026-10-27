@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- Dev viewer: one chapter world at one camera beat, without scrolling the site.
+     tools/worldview.html?k=29&s=0.5&b=0   (k: chapter, s: beat position, 0 = the establishing camera; b: pull-back while the portal opens, up to 2.4)
+     Served from the site folder; not part of the build. -->
+<html><head><meta charset="utf-8"><title>world view</title>
+<base href="../">
+<style>html,body{margin:0;background:#000;overflow:hidden}canvas{display:block;width:100vw;height:100vh}</style>
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.js" } }</script>
+</head><body><canvas id="c"></canvas>
+<script type="module">
+import * as THREE from 'three';
+import { Inside } from './js/inside.js';
+const q = new URLSearchParams(location.search);
+const k = +q.get('k'), s = +(q.get('s') ?? 0), t0 = +(q.get('t') ?? 4), back = +(q.get('b') ?? 0);
+const inside = new Inside(document.getElementById('c'));
+window.inside = inside;
+if (q.get('tm') === 'agx') inside.renderer.toneMapping = THREE.AgXToneMapping; // dev: compare tone mappings
+if (q.get('tm') === 'neutral') inside.renderer.toneMapping = THREE.NeutralToneMapping;
+if (q.get('x')) inside.exposureScale = +q.get('x');
+inside.setPixelRatio(1);
+inside.setSize(innerWidth, innerHeight);
+let n = 0;
+(function loop() {
+  inside.pose(k, s, back, t0 + n / 60, 1 / 60, innerWidth, innerHeight);
+  inside.render();
+  n++;
+  window.__frames = n;
+  requestAnimationFrame(loop);
+})();
+</script></body></html>

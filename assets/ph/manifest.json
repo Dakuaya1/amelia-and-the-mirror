@@ -1,0 +1,174 @@
+{
+ "textures": {
+  "old_wooden_floor_02": {
+   "map": "textures/old_wooden_floor_02/old_wooden_floor_02_diff_1k.jpg",
+   "normal": "textures/old_wooden_floor_02/old_wooden_floor_02_nor_gl_1k.jpg",
+   "arm": "textures/old_wooden_floor_02/old_wooden_floor_02_arm_1k.jpg",
+   "2k_desktop": {
+    "map": "textures/old_wooden_floor_02/old_wooden_floor_02_diff_2k.jpg",
+    "normal": "textures/old_wooden_floor_02/old_wooden_floor_02_nor_gl_2k.jpg",
+    "arm": "textures/old_wooden_floor_02/old_wooden_floor_02_arm_2k.jpg",
+    "note": "colour and ARM recompressed at JPEG quality 85; normal map as published"
+   }
+  },
+  "plastered_wall_03": {
+   "map": "textures/plastered_wall_03/plastered_wall_03_diff_1k.jpg",
+   "normal": "textures/plastered_wall_03/plastered_wall_03_nor_gl_1k.jpg",
+   "arm": "textures/plastered_wall_03/plastered_wall_03_arm_1k.jpg",
+   "2k_desktop": {
+    "map": "textures/plastered_wall_03/plastered_wall_03_diff_2k.jpg",
+    "normal": "textures/plastered_wall_03/plastered_wall_03_nor_gl_2k.jpg",
+    "arm": "textures/plastered_wall_03/plastered_wall_03_arm_2k.jpg",
+    "note": "colour and ARM recompressed at JPEG quality 85; normal map as published"
+   }
+  },
+  "quatrefoil_jacquard_fabric": {
+   "map": "textures/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_diff_1k.jpg",
+   "normal": "textures/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_nor_gl_1k.jpg",
+   "arm": "textures/quatrefoil_jacquard_fabric/quatrefoil_jacquard_fabric_arm_1k.jpg"
+  },
+  "velour_velvet": {
+   "map": "textures/velour_velvet/velour_velvet_diff_1k.jpg",
+   "normal": "textures/velour_velvet/velour_velvet_nor_gl_1k.jpg",
+   "arm": "textures/velour_velvet/velour_velvet_arm_1k.jpg"
+  },
+  "oak_wood_planks": {
+   "map": "textures/oak_wood_planks/oak_wood_planks_diff_1k.jpg",
+   "normal": "textures/oak_wood_planks/oak_wood_planks_nor_gl_1k.jpg",
+   "arm": "textures/oak_wood_planks/oak_wood_planks_arm_1k.jpg",
+   "2k_desktop": {
+    "map": "textures/oak_wood_planks/oak_wood_planks_diff_2k.jpg",
+    "normal": "textures/oak_wood_planks/oak_wood_planks_nor_gl_2k.jpg",
+    "arm": "textures/oak_wood_planks/oak_wood_planks_arm_2k.jpg",
+    "note": "colour and ARM recompressed at JPEG quality 85; normal map as published"
+   }
+  },
+  "brick_wall_08": {
+   "map": "textures/brick_wall_08/brick_wall_08_diff_1k.jpg",
+   "normal": "textures/brick_wall_08/brick_wall_08_nor_gl_1k.jpg",
+   "arm": "textures/brick_wall_08/brick_wall_08_arm_1k.jpg"
+  },
+  "castle_wall_slates": {
+   "map": "textures/castle_wall_slates/castle_wall_slates_diff_1k.jpg",
+   "normal": "textures/castle_wall_slates/castle_wall_slates_nor_gl_1k.jpg",
+   "arm": "textures/castle_wall_slates/castle_wall_slates_arm_1k.jpg",
+   "2k_desktop": {
+    "map": "textures/castle_wall_slates/castle_wall_slates_diff_2k.jpg",
+    "normal": "textures/castle_wall_slates/castle_wall_slates_nor_gl_2k.jpg",
+    "arm": "textures/castle_wall_slates/castle_wall_slates_arm_2k.jpg",
+    "note": "colour and ARM recompressed at JPEG quality 85; normal map as published"
+   }
+  },
+  "roof_slates_02": {
+   "map": "textures/roof_slates_02/roof_slates_02_diff_1k.jpg",
+   "normal": "textures/roof_slates_02/roof_slates_02_nor_gl_1k.jpg",
+   "arm": "textures/roof_slates_02/roof_slates_02_arm_1k.jpg"
+  },
+  "concrete_floor_worn_001": {
+   "map": "textures/concrete_floor_worn_001/concrete_floor_worn_001_diff_1k.jpg",
+   "normal": "textures/concrete_floor_worn_001/concrete_floor_worn_001_nor_gl_1k.jpg",
+   "arm": "textures/concrete_floor_worn_001/concrete_floor_worn_001_arm_1k.jpg"
+  },
+  "chipped_concrete": {
+   "map": "textures/chipped_concrete/chipped_concrete_diff_1k.jpg",
+   "normal": "textures/chipped_concrete/chipped_concrete_nor_gl_1k.jpg",
+   "arm": "textures/chipped_concrete/chipped_concrete_arm_1k.jpg"
+  },
+  "gravelly_sand": {
+   "map": "textures/gravelly_sand/gravelly_sand_diff_1k.jpg",
+   "normal": "textures/gravelly_sand/gravelly_sand_nor_gl_1k.jpg",
+   "arm": "textures/gravelly_sand/gravelly_sand_arm_1k.jpg"
+  },
+  "leafy_grass": {
+   "map": "textures/leafy_grass/leafy_grass_diff_1k.jpg",
+   "normal": "textures/leafy_grass/leafy_grass_nor_gl_1k.jpg",
+   "arm": "textures/leafy_grass/leafy_grass_arm_1k.jpg"
+  },
+  "dry_ground_rocks": {
+   "map": "textures/dry_ground_rocks/dry_ground_rocks_diff_1k.jpg",
+   "normal": "textures/dry_ground_rocks/dry_ground_rocks_nor_gl_1k.jpg",
+   "arm": "textures/dry_ground_rocks/dry_ground_rocks_arm_1k.jpg"
+  },
+  "rock_face_03": {
+   "map": "textures/rock_face_03/rock_face_03_diff_1k.jpg",
+   "normal": "textures/rock_face_03/rock_face_03_nor_gl_1k.jpg",
+   "arm": "textures/rock_face_03/rock_face_03_arm_1k.jpg"
+  },
+  "snow_02": {
+   "map": "textures/snow_02/snow_02_diff_1k.jpg",
+   "normal": "textures/snow_02/snow_02_nor_gl_1k.jpg",
+   "arm": "textures/snow_02/snow_02_arm_1k.jpg"
+  },
+  "rusty_metal_02": {
+   "map": "textures/rusty_metal_02/rusty_metal_02_diff_1k.jpg",
+   "normal": "textures/rusty_metal_02/rusty_metal_02_nor_gl_1k.jpg",
+   "arm": "textures/rusty_metal_02/rusty_metal_02_arm_1k.jpg"
+  },
+  "dirt_floor": {
+   "map": "textures/dirt_floor/dirt_floor_diff_1k.jpg",
+   "arm": "textures/dirt_floor/dirt_floor_arm_1k.jpg",
+   "normal": "textures/dirt_floor/dirt_floor_nor_gl_1k.jpg"
+  },
+  "stacked_stone_wall": {
+   "map": "textures/stacked_stone_wall/stacked_stone_wall_diff_1k.jpg",
+   "arm": "textures/stacked_stone_wall/stacked_stone_wall_arm_1k.jpg",
+   "normal": "textures/stacked_stone_wall/stacked_stone_wall_nor_gl_1k.jpg"
+  },
+  "gravel_road": {
+   "map": "textures/gravel_road/gravel_road_diff_1k.jpg",
+   "arm": "textures/gravel_road/gravel_road_arm_1k.jpg",
+   "normal": "textures/gravel_road/gravel_road_nor_gl_1k.jpg"
+  },
+  "corrugated_iron_02": {
+   "map": "textures/corrugated_iron_02/corrugated_iron_02_diff_1k.jpg",
+   "arm": "textures/corrugated_iron_02/corrugated_iron_02_arm_1k.jpg",
+   "normal": "textures/corrugated_iron_02/corrugated_iron_02_nor_gl_1k.jpg"
+  },
+  "aerial_rocks_02": {
+   "map": "textures/aerial_rocks_02/aerial_rocks_02_diff_1k.jpg",
+   "arm": "textures/aerial_rocks_02/aerial_rocks_02_arm_1k.jpg",
+   "normal": "textures/aerial_rocks_02/aerial_rocks_02_nor_gl_1k.jpg"
+  }
+ },
+ "models": {
+  "vintage_grandfather_clock_01": "models/vintage_grandfather_clock_01/vintage_grandfather_clock_01_1k.gltf",
+  "GreenChair_01": "models/GreenChair_01/GreenChair_01_1k.gltf",
+  "ArmChair_01": "models/ArmChair_01/ArmChair_01_1k.gltf",
+  "Chandelier_02": "models/Chandelier_02/Chandelier_02_1k.gltf",
+  "dining_chair_02": "models/dining_chair_02/dining_chair_02_1k.gltf",
+  "dining_table": "models/dining_table/dining_table_1k.gltf",
+  "fancy_picture_frame_01": "models/fancy_picture_frame_01/fancy_picture_frame_01_1k.gltf",
+  "Lantern_01": "models/Lantern_01/Lantern_01_1k.gltf",
+  "vintage_oil_lamp": "models/vintage_oil_lamp/vintage_oil_lamp_1k.gltf",
+  "GothicCabinet_01": "models/GothicCabinet_01/GothicCabinet_01_1k.gltf",
+  "book_encyclopedia_set_01": "models/book_encyclopedia_set_01/book_encyclopedia_set_01_1k.gltf",
+  "wooden_ladder": "models/wooden_ladder/wooden_ladder_1k.gltf",
+  "bench_vice_01": "models/bench_vice_01/bench_vice_01_1k.gltf",
+  "hand_plane_no4": "models/hand_plane_no4/hand_plane_no4_1k.gltf",
+  "handsaw_wood": "models/handsaw_wood/handsaw_wood_1k.gltf",
+  "old_drill_press": "models/old_drill_press/old_drill_press_1k.gltf",
+  "industrial_caged_sconce": "models/industrial_caged_sconce/industrial_caged_sconce_1k.gltf",
+  "large_castle_door": "models/large_castle_door/large_castle_door_1k.gltf",
+  "brass_diya_lantern": "models/brass_diya_lantern/brass_diya_lantern_1k.gltf",
+  "stone_01": "models/stone_01/stone_01_1k.gltf",
+  "namaqualand_boulder_02": "models/namaqualand_boulder_02/namaqualand_boulder_02_1k.gltf",
+  "dead_tree_trunk": "models/dead_tree_trunk/dead_tree_trunk_1k.gltf",
+  "wooden_crate_01": "models/wooden_crate_01/wooden_crate_01_1k.gltf",
+  "Barrel_01": "models/Barrel_01/Barrel_01_1k.gltf",
+  "mantel_clock_01": "models/mantel_clock_01/mantel_clock_01_1k.gltf",
+  "wooden_bookshelf_worn": "models/wooden_bookshelf_worn/wooden_bookshelf_worn_1k.gltf"
+ },
+ "hdris": {
+  "moonlit_golf": "hdri/moonlit_golf_1k.hdr",
+  "farmland_overcast": "hdri/farmland_overcast_1k.hdr",
+  "belfast_sunset_puresky": "hdri/belfast_sunset_puresky_1k.hdr",
+  "kloofendal_48d_partly_cloudy_puresky": "hdri/kloofendal_48d_partly_cloudy_puresky_1k.hdr",
+  "klippad_dawn_1": "hdri/klippad_dawn_1_1k.hdr",
+  "fireplace": "hdri/fireplace_1k.hdr",
+  "pine_attic": "hdri/pine_attic_1k.hdr",
+  "abandoned_workshop": "hdri/abandoned_workshop_1k.hdr",
+  "concrete_tunnel": "hdri/concrete_tunnel_1k.hdr",
+  "old_room": "hdri/old_room_1k.hdr",
+  "misty_dawn": "hdri/misty_dawn_1k.hdr"
+ }
+}

@@ -1,0 +1,1489 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amelia and the Mirror: The Origin · Book One</title>
+<meta name="description" content="Amelia and the Mirror: The Origin, Book One, by Priyanshu Sharma. A physicist comes home to Forefore Manor for her mother’s funeral, and eleven feet of the house appear on no plan. Out now in a new full-colour edition. Open the book and turn its pages by scroll.">
+<meta name="theme-color" content="#0b1322">
+<link rel="icon" href="assets/meta/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/meta/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/meta/apple-touch-icon.png">
+<!-- Share card. The build makes these addresses absolute when SITE_URL is set (see README). -->
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Amelia and the Mirror">
+<meta property="og:title" content="Amelia and the Mirror: The Origin · Book One">
+<meta property="og:description" content="A physicist comes home to Forefore Manor, and eleven feet of the house appear on no plan. Out now in a new full-colour edition.">
+<meta property="og:image" content="assets/meta/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The cover of Amelia and the Mirror beside its title, on a starry navy ground">
+<meta property="book:author" content="Priyanshu Sharma">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Amelia and the Mirror",
+  "alternateName": "Amelia and the Mirror: The Origin, Book One",
+  "author": { "@type": "Person", "name": "Priyanshu Sharma" },
+  "numberOfPages": 646,
+  "bookEdition": "Full-colour edition",
+  "image": "assets/meta/og-image.jpg",
+  "description": "A physicist comes home to Forefore Manor for her mother’s funeral, and eleven feet of the house appear on no plan.",
+  "sameAs": ["https://books2read.com/u/4D08z7", "https://amzn.in/d/039Afa9f"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<script type="importmap">
+  { "imports": { "three": "./vendor/three.module.js" } }
+</script>
+<style>
+  :root {
+    --sc-canvas:     #0b1322;
+    --sc-surface:    #111b2e;
+    --sc-ink:        #f4ecda;
+    --sc-ink-soft:   #a9b4cc;
+    --sc-accent:     #e2c283;
+    --sc-accent-ink: #15110a;
+    --sc-font-display: "Cinzel", "Trajan Pro", Georgia, serif;
+    --sc-font-text:    "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  }
+
+  html, body {
+    margin: 0;
+    color: var(--sc-ink);
+    font-family: var(--sc-font-text);
+  }
+  /* The ground is a night sky, fixed behind everything: the tour covers it, and the
+     pages after the tour scroll over it. */
+  html { background: #070b16; }
+  body::before, body::after { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+  body::before {
+    background:
+      radial-gradient(90% 55% at 50% 112%, rgba(226, 194, 131, 0.08), transparent 70%),
+      radial-gradient(120% 70% at 50% -12%, #16233f 0%, transparent 62%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640'%3E%3Ccircle cx='207.3' cy='96.5' r='0.84' fill='%23f4ecda' fill-opacity='0.21'/%3E%3Ccircle cx='234.0' cy='37.1' r='0.75' fill='%23f4ecda' fill-opacity='0.20'/%3E%3Ccircle cx='44.7' cy='58.1' r='0.70' fill='%23e2c283' fill-opacity='0.53'/%3E%3Ccircle cx='142.9' cy='401.6' r='1.02' fill='%23f4ecda' fill-opacity='0.42'/%3E%3Ccircle cx='624.8' cy='29.8' r='0.97' fill='%23e2c283' fill-opacity='0.30'/%3E%3Ccircle cx='75.4' cy='197.4' r='0.94' fill='%23f4ecda' fill-opacity='0.26'/%3E%3Ccircle cx='408.9' cy='238.3' r='0.78' fill='%23e2c283' fill-opacity='0.21'/%3E%3Ccircle cx='131.8' cy='435.5' r='0.71' fill='%23f4ecda' fill-opacity='0.31'/%3E%3Ccircle cx='290.0' cy='191.9' r='0.93' fill='%23e2c283' fill-opacity='0.47'/%3E%3Ccircle cx='367.6' cy='336.1' r='0.98' fill='%23e2c283' fill-opacity='0.49'/%3E%3Ccircle cx='627.3' cy='75.6' r='0.70' fill='%23e2c283' fill-opacity='0.50'/%3E%3Ccircle cx='312.9' cy='25.1' r='0.85' fill='%23f4ecda' fill-opacity='0.50'/%3E%3Ccircle cx='560.3' cy='200.8' r='0.87' fill='%23f4ecda' fill-opacity='0.43'/%3E%3Ccircle cx='292.0' cy='537.6' r='1.02' fill='%23f4ecda' fill-opacity='0.38'/%3E%3Ccircle cx='38.8' cy='449.0' r='0.84' fill='%23f4ecda' fill-opacity='0.60'/%3E%3Ccircle cx='182.1' cy='246.9' r='0.85' fill='%23f4ecda' fill-opacity='0.19'/%3E%3Ccircle cx='107.6' cy='74.9' r='0.49' fill='%23e2c283' fill-opacity='0.50'/%3E%3Ccircle cx='158.5' cy='250.2' r='0.97' fill='%23f4ecda' fill-opacity='0.21'/%3E%3Ccircle cx='351.6' cy='565.4' r='0.94' fill='%23e2c283' fill-opacity='0.54'/%3E%3Ccircle cx='265.8' cy='229.6' r='0.98' fill='%23e2c283' fill-opacity='0.58'/%3E%3Ccircle cx='112.8' cy='148.5' r='0.59' fill='%23f4ecda' fill-opacity='0.38'/%3E%3Ccircle cx='168.2' cy='2.6' r='0.70' fill='%23f4ecda' fill-opacity='0.34'/%3E%3Ccircle cx='610.0' cy='441.9' r='0.76' fill='%23f4ecda' fill-opacity='0.44'/%3E%3Ccircle cx='34.6' cy='575.7' r='0.92' fill='%23f4ecda' fill-opacity='0.55'/%3E%3Ccircle cx='251.1' cy='255.3' r='0.51' fill='%23e2c283' fill-opacity='0.45'/%3E%3Ccircle cx='43.1' cy='133.6' r='0.55' fill='%23e2c283' fill-opacity='0.32'/%3E%3Ccircle cx='0.1' cy='96.8' r='0.51' fill='%23e2c283' fill-opacity='0.33'/%3E%3Ccircle cx='559.6' cy='393.0' r='0.54' fill='%23e2c283' fill-opacity='0.29'/%3E%3Ccircle cx='233.1' cy='78.6' r='0.96' fill='%23f4ecda' fill-opacity='0.60'/%3E%3Ccircle cx='309.7' cy='55.0' r='0.51' fill='%23e2c283' fill-opacity='0.32'/%3E%3Ccircle cx='530.5' cy='103.3' r='0.46' fill='%23f4ecda' fill-opacity='0.58'/%3E%3Ccircle cx='93.8' cy='347.6' r='0.47' fill='%23f4ecda' fill-opacity='0.40'/%3E%3Ccircle cx='552.5' cy='445.6' r='0.61' fill='%23e2c283' fill-opacity='0.33'/%3E%3Ccircle cx='494.0' cy='340.9' r='0.92' fill='%23e2c283' fill-opacity='0.32'/%3E%3Ccircle cx='519.4' cy='630.4' r='0.96' fill='%23f4ecda' fill-opacity='0.52'/%3E%3Ccircle cx='473.5' cy='145.1' r='0.76' fill='%23e2c283' fill-opacity='0.33'/%3E%3Ccircle cx='17.9' cy='178.8' r='0.61' fill='%23f4ecda' fill-opacity='0.47'/%3E%3Ccircle cx='286.2' cy='599.7' r='1.04' fill='%23f4ecda' fill-opacity='0.58'/%3E%3Ccircle cx='141.1' cy='145.2' r='0.57' fill='%23f4ecda' fill-opacity='0.27'/%3E%3Ccircle cx='576.2' cy='537.9' r='0.74' fill='%23f4ecda' fill-opacity='0.45'/%3E%3Ccircle cx='54.3' cy='422.8' r='1.00' fill='%23f4ecda' fill-opacity='0.51'/%3E%3Ccircle cx='305.9' cy='114.3' r='0.92' fill='%23f4ecda' fill-opacity='0.32'/%3E%3Ccircle cx='621.9' cy='253.3' r='0.69' fill='%23f4ecda' fill-opacity='0.58'/%3E%3Ccircle cx='108.8' cy='81.3' r='0.54' fill='%23f4ecda' fill-opacity='0.56'/%3E%3Ccircle cx='93.6' cy='529.0' r='1.04' fill='%23f4ecda' fill-opacity='0.46'/%3E%3Ccircle cx='351.1' cy='83.8' r='0.46' fill='%23f4ecda' fill-opacity='0.59'/%3E%3C/svg%3E");
+    background-size: auto, auto, 640px 640px;
+  }
+  body::after { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900'%3E%3Ccircle cx='407.1' cy='503.8' r='1.35' fill='%23f4ecda' fill-opacity='0.58'/%3E%3Ccircle cx='528.6' cy='166.2' r='1.06' fill='%23f4ecda' fill-opacity='0.66'/%3E%3Ccircle cx='84.7' cy='273.1' r='0.76' fill='%23f4ecda' fill-opacity='0.75'/%3E%3Ccircle cx='37.7' cy='884.0' r='1.38' fill='%23f4ecda' fill-opacity='0.68'/%3E%3Ccircle cx='141.7' cy='13.5' r='1.07' fill='%23e2c283' fill-opacity='0.38'/%3E%3Ccircle cx='217.7' cy='27.1' r='1.02' fill='%23f4ecda' fill-opacity='0.57'/%3E%3Ccircle cx='467.2' cy='576.3' r='1.05' fill='%23f4ecda' fill-opacity='0.68'/%3E%3Ccircle cx='250.3' cy='897.9' r='1.40' fill='%23f4ecda' fill-opacity='0.77'/%3E%3Ccircle cx='283.7' cy='206.7' r='0.90' fill='%23f4ecda' fill-opacity='0.39'/%3E%3Ccircle cx='360.4' cy='761.9' r='0.97' fill='%23f4ecda' fill-opacity='0.83'/%3E%3Ccircle cx='0.5' cy='188.7' r='1.34' fill='%23f4ecda' fill-opacity='0.58'/%3E%3Ccircle cx='357.7' cy='65.7' r='1.14' fill='%23e2c283' fill-opacity='0.74'/%3E%3Ccircle cx='78.4' cy='299.3' r='1.37' fill='%23e2c283' fill-opacity='0.73'/%3E%3Ccircle cx='221.7' cy='90.9' r='0.74' fill='%23e2c283' fill-opacity='0.75'/%3E%3Ccircle cx='503.4' cy='402.7' r='0.83' fill='%23e2c283' fill-opacity='0.72'/%3E%3Ccircle cx='579.3' cy='104.9' r='0.99' fill='%23e2c283' fill-opacity='0.46'/%3E%3Ccircle cx='873.8' cy='723.1' r='0.91' fill='%23e2c283' fill-opacity='0.79'/%3E%3Ccircle cx='354.8' cy='768.9' r='1.15' fill='%23f4ecda' fill-opacity='0.40'/%3E%3Ccircle cx='191.9' cy='232.4' r='1.24' fill='%23e2c283' fill-opacity='0.51'/%3E%3Ccircle cx='66.1' cy='81.1' r='1.11' fill='%23f4ecda' fill-opacity='0.47'/%3E%3Ccircle cx='334.5' cy='407.9' r='1.37' fill='%23f4ecda' fill-opacity='0.59'/%3E%3Ccircle cx='779.9' cy='164.5' r='0.81' fill='%23f4ecda' fill-opacity='0.80'/%3E%3C/svg%3E"); background-size: 900px 900px; opacity: 0.55; animation: twinkle 7s ease-in-out infinite alternate; }
+  @keyframes twinkle { to { opacity: 0.95; } }
+
+  .topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px clamp(1.25rem, 3.2vw, 2.75rem);
+    pointer-events: none;
+    font-family: var(--sc-font-display);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--sc-accent);
+  }
+  /* The wordmark waits until the frontispiece has gone: the title is already on screen. */
+  .brand { display: inline-flex; align-items: center; gap: 0.75rem; opacity: 0; transition: opacity 0.6s ease; }
+  body.is-past-hero .brand { opacity: 1; }
+  .brand .star { font-size: 11px; }
+  .toc-icon { width: 13px; height: 10px; }
+
+  /* The pinned stage: the 3D book fills it, the copy sits over it. */
+  .stage { overflow: hidden; }
+  #scene3d {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .copy-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  /* One block per spread. scrollcraft fades each in and out on its cue window. */
+  .beat {
+    position: absolute;
+    top: 50%;
+    right: 6vw;
+    width: min(30rem, 34vw);
+    translate: 0 -50%;
+    opacity: 0;
+  }
+  .beat .folio {
+    margin: 0 0 1rem;
+    font-family: var(--sc-font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sc-accent);
+  }
+  .beat h2 {
+    margin: 0 0 1rem;
+    font-family: var(--sc-font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.1;
+  }
+  .beat .dek {
+    margin: 0 0 1.2rem;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.45;
+    color: var(--sc-ink-soft);
+  }
+  .beat .line {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.45;
+  }
+
+  /* ---- the frontispiece ----
+     A title page set in gilt: the cover's own lockup (AMELIA / and the / MIRROR)
+     on the left, the book under the lamp on the right. */
+  :root {
+    --gilt: #e4c587;
+    --gilt-deep: #b8914e;
+    --parchment: #f1e6cc;
+    --ease-out: cubic-bezier(0.16, 0.8, 0.12, 1);
+    --font-swash: "Cinzel Decorative", "Cinzel", Georgia, serif;
+  }
+  .star { width: 1em; height: 1em; flex: none; }
+
+  .hero {
+    top: 50%;
+    left: clamp(2rem, 7vw, 8.5rem);
+    right: auto;
+    width: min(35rem, 42vw);
+    translate: 0 -47%;
+    pointer-events: auto;
+  }
+  body.is-past-hero .hero { pointer-events: none; }
+  /* A scrim only where the type sits, so the room stays lit everywhere else. */
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: -45% -40% -45% -70%;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(4, 7, 14, 0.82), rgba(4, 7, 14, 0.5) 55%, transparent);
+    pointer-events: none;
+  }
+  .hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0 0 clamp(0.8rem, 2.6vh, 1.7rem);
+    font-family: var(--sc-font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    color: var(--sc-ink-soft);
+  }
+  .hero__eyebrow .star { font-size: 0.8rem; color: var(--gilt); }
+  .hero__eyebrow .dot { color: var(--gilt-deep); }
+  .hero__title {
+    margin: 0;
+    font-family: var(--font-swash);
+    font-weight: 400;
+    color: var(--gilt);
+    /* Embossed foil: a crisp dark lip below, a soft cast shadow on the desk. */
+    text-shadow: 0 1px 0 rgba(30, 18, 4, 0.9), 0 2px 1px rgba(0, 0, 0, 0.35), 0 22px 44px rgba(0, 0, 0, 0.55);
+  }
+  .hero__word {
+    display: block;
+    /* Bounded by width and by height, so the lockup fits short laptop screens. */
+    font-size: clamp(3rem, min(7.2vw, 11.5vh), 7.4rem);
+    line-height: 0.92;
+    letter-spacing: 0.015em;
+  }
+  .hero__and {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.55rem 0 0.45rem 0.35rem;
+    font-family: var(--sc-font-text);
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(1.15rem, 1.8vw, 1.75rem);
+    letter-spacing: 0.08em;
+    color: var(--parchment);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  }
+  .hero__and i {
+    display: block;
+    height: 1px;
+    flex: 0 0 clamp(2.2rem, 4.5vw, 4rem);
+    background: linear-gradient(90deg, transparent, var(--gilt-deep));
+  }
+  .hero__and i:last-child { background: linear-gradient(90deg, var(--gilt-deep), transparent); }
+  .hero__sub {
+    margin: clamp(0.7rem, 2.2vh, 1.5rem) 0 0;
+    font-style: italic;
+    font-size: clamp(1.3rem, min(2vw, 3vh), 1.95rem);
+    letter-spacing: 0.03em;
+    color: var(--parchment);
+  }
+  .hero__rule {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 12rem;
+    margin: clamp(0.7rem, 2vh, 1.3rem) 0 clamp(0.7rem, 2vh, 1.4rem);
+    color: var(--gilt);
+    font-size: 0.6rem;
+  }
+  .hero__rule i { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(228, 197, 135, 0.7)); }
+  .hero__rule i:last-child { background: linear-gradient(90deg, rgba(228, 197, 135, 0.7), transparent); }
+  .hero__blurb {
+    max-width: 31rem;
+    margin: 0;
+    font-size: clamp(1.05rem, 1rem + 0.45vh, 1.24rem);
+    line-height: 1.58;
+    color: #cdd5e5;
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.8rem;
+    margin-top: clamp(1.1rem, 3.2vh, 2.2rem);
+  }
+  .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.7rem 1rem 1.35rem;
+    border: 1px solid rgba(228, 197, 135, 0.75);
+    border-radius: 999px;
+    background: rgba(228, 197, 135, 0.07);
+    color: var(--gilt);
+    font-family: var(--sc-font-display);
+    font-size: 0.76rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 236, 196, 0.15);
+    transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+  }
+  .hero__cta .star { font-size: 0.85rem; transition: transform 0.7s var(--ease-out); }
+  .hero__cta:hover { background-color: var(--gilt); color: #17110a; transform: translateY(-2px); }
+  .hero__cta:hover .star { transform: rotate(90deg); }
+  .hero__cta:focus-visible { outline: 2px solid var(--gilt); outline-offset: 4px; }
+  .hero__by {
+    margin: 0;
+    font-family: var(--sc-font-display);
+    font-size: 0.74rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--sc-ink);
+  }
+  .hero__by span {
+    margin-right: 0.45rem;
+    font-family: var(--sc-font-text);
+    font-size: 1.05rem;
+    font-style: italic;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--sc-ink-soft);
+  }
+  /* Three stars from the cover, breathing slowly around the lockup. */
+  .hero__spark {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    color: var(--gilt);
+    opacity: 0;
+    animation: twinkle 4.2s ease-in-out infinite;
+  }
+  .hero__spark--a { top: 3.2rem; right: 6%; animation-delay: 1.6s; }
+  .hero__spark--b { top: 42%; right: -7%; width: 9px; height: 9px; animation-delay: 2.7s; }
+  .hero__spark--c { top: 1.2rem; left: -2.4rem; width: 10px; height: 10px; animation-delay: 3.6s; }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.15; transform: scale(0.6) rotate(0deg); }
+    50% { opacity: 1; transform: scale(1.1) rotate(45deg); }
+  }
+
+  /* Short desktop screens: keep the blurb to two sentences. */
+  @media (min-width: 861px) and (max-height: 760px) {
+    .hero__more { display: none; }
+  }
+
+  /* Entrance: each line rises out of a soft blur, in reading order. */
+  [data-rise] { opacity: 0; }
+  body.is-ready [data-rise] { animation: rise 1.25s var(--ease-out) var(--d, 0s) both; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(22px); filter: blur(8px); }
+    to { opacity: 1; transform: none; filter: blur(0); }
+  }
+
+  /* ---- the portal into the page ---- */
+  .portal {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+  }
+  .portal canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  /* Darkened paper edges, so the inside world feels held by the page. */
+  .portal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(90, 60, 30, 0.28) 100%);
+  }
+  .portal-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(226, 194, 131, 0.7);
+    box-shadow: 0 0 40px 6px rgba(226, 194, 131, 0.35), inset 0 0 30px 4px rgba(226, 194, 131, 0.25);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .veil {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    background: radial-gradient(70% 70% at 50% 50%, #fff3d6 0%, #ffd79a 45%, #e9a85e 100%);
+  }
+
+  /* In the study, before the cover opens: a quiet line under the book. */
+  .beat--study {
+    top: auto;
+    bottom: 9svh;
+    left: 50%;
+    right: auto;
+    width: min(28rem, 86vw);
+    translate: -50% 0;
+    text-align: center;
+  }
+  .beat--study .folio { margin-bottom: 0.6rem; }
+  .beat--study .line { font-style: italic; font-size: 1.5rem; }
+
+  /* The finale over the manor at dawn. */
+  .beat--finale {
+    top: auto;
+    bottom: 9svh;
+    left: 50%;
+    right: auto;
+    width: min(44rem, 90vw);
+    translate: -50% 0;
+    text-align: center;
+    color: #2a1d10;
+  }
+  .beat--finale::before {
+    content: "";
+    position: absolute;
+    inset: -40% -20% -30%;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(246, 226, 200, 0.75), rgba(246, 226, 200, 0));
+  }
+  .beat--finale .eyebrow {
+    margin: 0 0 0.8rem;
+    font-family: var(--sc-font-display);
+    font-size: 0.72rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #7a4e1e;
+  }
+  .finale__title {
+    margin: 0;
+    font-family: "Cinzel Decorative", "Cinzel", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 4.4rem);
+    line-height: 1;
+    color: #3b2611;
+  }
+  .finale__by { margin: 0.9rem 0 0; font-style: italic; font-size: 1.3rem; }
+  .finale__legal { margin: 0.5rem 0 0; font-size: 0.95rem; color: #6a5238; }
+
+  /* Inside the page the ground is paper, so the chrome switches to ink. */
+  .topbar { transition: color 0.4s ease; }
+
+  /* ---- scene captions: parchment over the chapter's world, on a soft scrim ---- */
+  .beat--scene {
+    width: min(26rem, 32vw);
+    color: #f1e6cc;
+  }
+  .beat--scene::before {
+    content: "";
+    position: absolute;
+    inset: -45% -35%;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(4, 6, 10, 0.72), rgba(4, 6, 10, 0.35) 60%, transparent);
+    pointer-events: none;
+  }
+  .beat--scene.beat--right { right: 7vw; }
+  .beat--scene.beat--left { right: auto; left: 7vw; }
+  .beat--scene .folio { color: var(--gilt, #e4c587); }
+  .beat--scene h3 {
+    margin: 0 0 0.9rem;
+    font-family: var(--sc-font-display);
+    font-weight: 400;
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    line-height: 1.12;
+  }
+  .beat--scene .passage {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.65);
+  }
+
+  /* ---- chapter menu ---- */
+  .chapters-toggle {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 10px 18px 10px 15px;
+    border: 1px solid rgba(226, 194, 131, 0.55);
+    border-radius: 999px;
+    background: rgba(10, 12, 18, 0.55);
+    color: var(--sc-accent);
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+  }
+
+  .loader {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 14px;
+    background: radial-gradient(60% 50% at 50% 50%, #101a2e 0%, #060b16 70%);
+    transition: opacity 1s var(--ease-out, ease);
+  }
+  .loader.is-hidden { opacity: 0; pointer-events: none; }
+  .loader-star {
+    width: 30px;
+    height: 30px;
+    color: var(--sc-accent);
+    animation: loader-turn 5s linear infinite, pulse 1.8s ease-in-out infinite;
+  }
+  .loader-title {
+    margin: 6px 0 0;
+    font-family: "Cinzel Decorative", "Cinzel", Georgia, serif;
+    font-size: 1.35rem;
+    letter-spacing: 0.06em;
+    color: var(--sc-accent);
+  }
+  .loader-note { margin: 0; font-style: italic; color: var(--sc-ink-soft); }
+  @keyframes pulse { 50% { opacity: 0.35; } }
+  @keyframes loader-turn { to { transform: rotate(360deg); } }
+
+  @media (max-width: 860px) {
+    .topbar { padding: 16px; font-size: 11px; }
+    .beat {
+      top: auto;
+      bottom: 4svh;
+      left: 6vw;
+      right: 6vw;
+      width: auto;
+      translate: 0 0;
+    }
+    .beat h2 { font-size: 1.9rem; margin-bottom: 0.5rem; }
+    .beat .dek { font-size: 1rem; margin-bottom: 0.6rem; }
+    .beat .line { font-size: 1.1rem; }
+    .brand { gap: 0.55rem; letter-spacing: 0.24em; }
+    /* Phone: the book sits above, the frontispiece is centred beneath it. */
+    .hero {
+      top: auto;
+      bottom: 4.5svh;
+      left: 0;
+      right: 0;
+      width: auto;
+      padding: 0 7vw;
+      translate: 0 0;
+      text-align: center;
+    }
+    .hero::before {
+      inset: -35% 0 -10%;
+      background: linear-gradient(to top, rgba(4, 7, 14, 0.9) 50%, transparent);
+    }
+    .hero__eyebrow { justify-content: center; margin-bottom: 1rem; letter-spacing: 0.34em; }
+    .hero__word { font-size: clamp(2.7rem, 12.5vw, 4.2rem); }
+    .hero__and { justify-content: center; margin: 0.35rem 0 0.3rem; }
+    .hero__sub { margin-top: 0.9rem; font-size: 1.35rem; }
+    .hero__rule { display: none; }
+    .hero__blurb { margin: 0.9rem auto 0; font-size: 1.04rem; line-height: 1.5; }
+    .hero__more { display: none; }
+    .hero__actions { justify-content: center; margin-top: 1.3rem; gap: 0.9rem 1.4rem; }
+    .hero__spark--b { right: 4%; top: 30%; }
+    .hero__spark--c { left: 6%; }
+    .beat--scene,
+    .beat--scene.beat--left,
+    .beat--scene.beat--right {
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+      padding: 7svh 6vw 4svh;
+      background: linear-gradient(to top, rgba(4, 6, 10, 0.92) 55%, rgba(4, 6, 10, 0));
+    }
+    .beat--scene .passage { font-size: 1.08rem; }
+    .beat--scene::before { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    [data-rise], body.is-ready [data-rise] { animation: none; opacity: 1; }
+    .hero__spark, .loader-star { animation: none; opacity: 0.8; }
+  }
+
+
+  /* ---- the Mirror's light: decoding titles, surfacing passages, the gate, the readout ----
+     (js/text-fx.js and js/scifi.js) Green glass is the Mirror's colour; gilt stays the book's. */
+  :root {
+    --glass: #7ef0c8;
+    --glass-hi: #e2fff4;
+    --glass-glow: rgba(126, 240, 200, 0.7);
+    --font-hud: "Share Tech Mono", ui-monospace, Menlo, monospace;
+  }
+  /* letters that decode: hidden, then a glyph of green glass over the letter, then the letter, flashing */
+  .fx-wd { white-space: nowrap; }
+  .fx-c { position: relative; }
+  .fx-c.is-wait,
+  .fx-c.is-scr { color: transparent; text-shadow: none; }
+  .fx-c.is-scr::after {
+    content: attr(data-g);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    translate: -50% 0;
+    color: var(--glass);
+    text-shadow: 0 0 10px var(--glass-glow), 0 0 2px var(--glass-hi);
+  }
+  .fx-c.is-set { animation: fx-set 0.9s ease-out both; }
+  @keyframes fx-set { from { color: var(--glass-hi); text-shadow: 0 0 18px var(--glass-glow), 0 0 3px #fff; } }
+  /* words that surface, one after another, out of the same light */
+  .fx-w { display: inline-block; }
+  .beat:not(.is-live) .fx-w { opacity: 0; }
+  .beat.is-live .fx-w { animation: fx-word 0.95s var(--ease-out) both; animation-delay: calc(0.55s + var(--i) * 17ms); }
+  @keyframes fx-word {
+    from { opacity: 0; transform: translate3d(0, 0.55em, 0); }
+  }
+  /* a line of light drawn under the title */
+  .fx-rule {
+    display: block;
+    width: min(15rem, 72%);
+    height: 1px;
+    margin: -0.3rem 0 1.05rem;
+    background: linear-gradient(90deg, var(--glass-hi), var(--glass) 18%, rgba(228, 197, 135, 0.55) 60%, transparent);
+    box-shadow: 0 0 8px rgba(126, 240, 200, 0.45);
+    clip-path: inset(0 100% 0 0);
+  }
+  .beat.is-live .fx-rule { animation: fx-rule 1.5s var(--ease-out) 0.4s both; }
+  @keyframes fx-rule { to { clip-path: inset(0 0 0 0); } }
+  .beat--study .fx-rule,
+  .beat--finale .fx-rule { margin-inline: auto; clip-path: inset(0 50% 0 50%); background: linear-gradient(90deg, transparent, var(--glass), transparent); }
+  /* the scene's number, set like an instrument's */
+  .beat .fx-index {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin: 0 0 0.6rem;
+    font-family: var(--font-hud);
+    font-size: 0.72rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--glass);
+  }
+  .fx-index::before { content: ""; width: 1.8rem; height: 1px; background: var(--glass); box-shadow: 0 0 6px var(--glass-glow); }
+  /* corner brackets round a scene's caption, closing in, and one scan down it */
+  .fx-frame { position: absolute; inset: -1.6rem -1.8rem; pointer-events: none; }
+  .fx-frame i { position: absolute; width: 20px; height: 20px; border: 0 solid var(--glass); opacity: 0; }
+  .fx-frame i:nth-child(1) { top: 0; left: 0; border-top-width: 1px; border-left-width: 1px; --fx: -16px; --fy: -16px; }
+  .fx-frame i:nth-child(2) { top: 0; right: 0; border-top-width: 1px; border-right-width: 1px; --fx: 16px; --fy: -16px; }
+  .fx-frame i:nth-child(3) { bottom: 0; left: 0; border-bottom-width: 1px; border-left-width: 1px; --fx: -16px; --fy: 16px; }
+  .fx-frame i:nth-child(4) { bottom: 0; right: 0; border-bottom-width: 1px; border-right-width: 1px; --fx: 16px; --fy: 16px; }
+  .beat.is-live .fx-frame i { animation: fx-corner 1.1s var(--ease-out) both; }
+  @keyframes fx-corner {
+    from { opacity: 0; transform: translate(var(--fx), var(--fy)); }
+    35% { opacity: 1; }
+    to { opacity: 0.75; transform: none; }
+  }
+  .fx-frame::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--glass-hi), transparent);
+    box-shadow: 0 0 12px 2px rgba(126, 240, 200, 0.35);
+    opacity: 0;
+  }
+  .beat.is-live .fx-frame::after { animation: fx-scan 1.7s ease-in-out 0.25s both; }
+  @keyframes fx-scan {
+    from { top: 0; opacity: 0; }
+    12%, 85% { opacity: 0.85; }
+    to { top: 100%; opacity: 0; }
+  }
+
+  /* the frontispiece: a sheen of light crossing the gilt every few seconds */
+  .hero__word { position: relative; }
+  .hero__word::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 40%, rgba(255, 250, 230, 0.95) 48%, rgba(170, 255, 225, 0.75) 52%, transparent 60%);
+    background-size: 320% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+    pointer-events: none;
+  }
+  body.is-ready .hero__word::after { animation: fx-foil 8s ease-in-out 3.4s infinite; }
+  @keyframes fx-foil { from { background-position: 100% 0; } 32%, to { background-position: -60% 0; } }
+
+  /* the gate round the portal */
+  .portal-ring {
+    width: 720px; /* GATE_R * 2 in main.js: scaled to the portal, never redrawn at a new size */
+    height: 720px;
+    border: 0;
+    box-shadow: 0 0 60px 12px rgba(126, 240, 200, 0.4), inset 0 0 50px 10px rgba(126, 240, 200, 0.32);
+    will-change: transform, opacity;
+  }
+  .gate { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .gate circle { fill: none; }
+  /* a dark band behind the runes, so the gate reads on bright paper as well as on the dark */
+  .gate__band { stroke: rgba(4, 16, 14, 0.5); stroke-width: 15; }
+  .gate__rim { stroke: rgba(240, 214, 160, 0.95); stroke-width: 1; }
+  .gate__ticks circle { stroke: var(--glass-hi); stroke-width: 4; stroke-dasharray: 0.6 2.2; }
+  .gate__arcs circle { stroke: var(--glass); stroke-width: 1.6; stroke-dasharray: 46 12 8 20 70 16 24 10; }
+  .gate__runes text { fill: var(--glass-hi); font-size: 7.5px; font-family: var(--sc-font-display); }
+  .gate__inner { stroke: var(--glass); stroke-width: 1; opacity: 0.85; }
+  .warp { position: absolute; inset: 0; width: 100%; height: 100%; display: block; pointer-events: none; }
+
+  /* the readout */
+  .hud {
+    position: absolute;
+    left: clamp(1.25rem, 3.2vw, 2.75rem);
+    bottom: clamp(1.2rem, 4.5vh, 2.6rem);
+    width: 18rem;
+    padding: 0.85rem 1rem 0.75rem;
+    font-family: var(--font-hud);
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(214, 255, 240, 0.78);
+    background: linear-gradient(120deg, rgba(6, 18, 16, 0.62), rgba(6, 12, 18, 0.18));
+    border-left: 1px solid rgba(126, 240, 200, 0.6);
+    opacity: 0;
+    transform: translateX(-14px);
+    transition: opacity 0.6s ease, transform 0.9s var(--ease-out);
+    pointer-events: none;
+  }
+  .hud::before,
+  .hud::after { content: ""; position: absolute; right: 0; width: 10px; height: 10px; border: 0 solid rgba(126, 240, 200, 0.6); }
+  .hud::before { top: 0; border-top-width: 1px; border-right-width: 1px; }
+  .hud::after { bottom: 0; border-bottom-width: 1px; border-right-width: 1px; }
+  body.is-inside .hud { opacity: 1; transform: none; }
+  .hud p { margin: 0 0 0.38rem; }
+  .hud__tag { display: flex; align-items: center; gap: 0.55rem; color: var(--glass); }
+  .hud__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--glass); box-shadow: 0 0 8px var(--glass-glow); animation: hud-blink 1.4s steps(2, jump-none) infinite; }
+  @keyframes hud-blink { 50% { opacity: 0.2; } }
+  .hud__title { overflow: hidden; color: var(--parchment); font-size: 0.72rem; letter-spacing: 0.08em; white-space: nowrap; text-overflow: ellipsis; }
+  .hud__row { display: flex; align-items: center; gap: 0.6rem; }
+  .hud__sep { width: 1px; height: 0.8em; background: rgba(126, 240, 200, 0.5); }
+  .hud__bars { display: inline-flex; gap: 3px; }
+  .hud__bars i { width: 14px; height: 4px; background: rgba(126, 240, 200, 0.18); transition: background 0.4s ease, box-shadow 0.4s ease; }
+  .hud__bars i.is-on { background: var(--glass); box-shadow: 0 0 6px var(--glass-glow); }
+  .hud__wave { display: block; width: 100%; height: 16px; margin-top: 0.15rem; }
+  .hud__wave path { fill: none; stroke: var(--glass); stroke-width: 1; opacity: 0.75; vector-effect: non-scaling-stroke; }
+  @media (max-width: 860px), (max-height: 600px) { .hud { display: none; } }
+  /* phones: the caption is a band across the bottom, so its brackets sit inside the screen */
+  @media (max-width: 860px) { .beat--scene .fx-frame { inset: 4.5svh 3.5vw 2svh; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    .beat:not(.is-live) .fx-w, .beat.is-live .fx-w { animation: none; opacity: 1; }
+    .fx-rule, .beat--study .fx-rule, .beat--finale .fx-rule { clip-path: none; }
+    .beat.is-live .fx-rule { animation: none; }
+    .beat.is-live .fx-frame i { animation: none; opacity: 0.75; }
+    .fx-frame::after, .hero__word::after { display: none; }
+    .hud__dot { animation: none; }
+  }
+
+
+  /* ---- the machine: brass clockwork (js/machine.js) ---- */
+  /* the loader: two wheels meshing */
+  .loader-works { width: 96px; height: 64px; overflow: visible; }
+  .loader-wheel { fill: #c9a159; stroke: rgba(40, 26, 8, 0.5); stroke-width: 0.6; transform-box: fill-box; transform-origin: center; }
+  .loader-wheel--a { animation: works-a 9s linear infinite; }
+  .loader-wheel--b { fill: #e2c283; animation: loader-b 5s linear infinite; }
+  @keyframes loader-b { from { transform: rotate(17deg); } to { transform: rotate(-343deg); } }
+
+  /* the frontispiece: gilt clockwork behind the title, turning slowly, and faster as the page scrolls */
+  .hero__works { position: absolute; left: -18%; top: -18%; width: 132%; aspect-ratio: 520 / 420; z-index: -1; pointer-events: none; opacity: 0; }
+  .hero__works path { fill: rgba(228, 197, 135, 0.04); stroke: rgba(228, 197, 135, 0.55); stroke-width: 1.4; }
+  body.is-ready .hero__works { animation: works-in 2.6s ease 1.4s forwards; }
+  @keyframes works-in { to { opacity: 0.6; } }
+  /* each wheel its own layer, turned whole by the compositor: nothing is repainted as it turns */
+  .hero__wheel { position: absolute; overflow: visible; will-change: transform; }
+  body.is-past-hero .hero__wheel { animation-play-state: paused; }
+  .hero__wheel--a { animation: works-a 90s linear infinite; rotate: calc(var(--spin, 0) * 1deg); }
+  .hero__wheel--b { animation: works-b 37.5s linear infinite; rotate: calc(var(--spin, 0) * -2.4deg); }
+  .hero__wheel--c { animation: works-a 26.25s linear infinite; rotate: calc(var(--spin, 0) * 3.43deg); }
+  @keyframes works-a { to { transform: rotate(360deg); } }
+  @keyframes works-b { from { transform: rotate(9.36deg); } to { transform: rotate(-350.64deg); } }
+
+  /* the iris in the portal's gate: steel blades on pivots, swung back as it opens (--open, 0..1) */
+  .gate__blade {
+    fill: url(#gate-steel);
+    stroke: rgba(228, 197, 135, 0.6);
+    stroke-width: 0.8;
+    transform-box: view-box;
+    transform-origin: 100px 20px;
+    transform: rotate(calc(var(--open, 1) * -82deg));
+  }
+  .gate__iris { opacity: calc(1 - var(--open, 1) * 0.4); }
+
+  /* the reading clock */
+  .clock {
+    position: fixed;
+    right: clamp(34px, 3.2vw, 48px);
+    bottom: clamp(18px, 3.4vh, 32px);
+    z-index: 5;
+    width: 92px;
+    height: 92px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+    transition: opacity 0.8s ease, transform 0.8s var(--ease-out);
+    pointer-events: none;
+  }
+  body.is-past-hero .clock { opacity: 1; transform: none; pointer-events: auto; }
+  body.is-after-act .clock { opacity: 0; pointer-events: none; }
+  body.is-past-hero .clock:hover { transform: scale(1.07) rotate(-2deg); }
+  .clock:focus-visible { outline: 2px solid var(--gilt); outline-offset: 4px; }
+  .clock__svg { display: block; width: 100%; height: 100%; }
+  .clock__mark { fill: #b8914e; transition: fill 0.4s ease; }
+  .clock__mark.is-here { fill: var(--glass); filter: drop-shadow(0 0 2px var(--glass)); }
+  .clock__hand { fill: #f3dca4; stroke: rgba(40, 26, 8, 0.55); stroke-width: 0.35; }
+  .clock__hand--min { fill: #e6c98c; }
+  .clock__sec {
+    stroke: var(--glass);
+    stroke-width: 0.7;
+    stroke-linecap: round;
+    transform-box: view-box;
+    transform-origin: 60px 34px;
+    transition: transform 0.3s cubic-bezier(0.3, 1.9, 0.5, 1);
+  }
+  .clock__label {
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    translate: 0 -50%;
+    padding: 0.42rem 0.75rem;
+    white-space: nowrap;
+    font-family: var(--font-hud);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--parchment);
+    background: rgba(8, 12, 18, 0.72);
+    border-left: 1px solid var(--glass);
+    opacity: 0;
+    transform: translateX(6px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+  }
+  .clock:hover .clock__label,
+  .clock:focus-visible .clock__label { opacity: 1; transform: none; }
+  .clock__label::before { content: "Contents · "; color: var(--glass); }
+  @media (max-width: 860px) { .clock { display: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .loader-wheel, .hero__wheel { animation: none; rotate: none; }
+    .clock__sec { transition: none; }
+  }
+
+
+  /* ---- more of the machine: split-flap numbers, the page odometer, the winding key ---- */
+  /* a chapter's number on split-flap tiles (js/machine.js SplitFlap) */
+  .flap { display: inline-flex; gap: 5px; margin: 0 0 0.9rem; perspective: 320px; font-family: var(--sc-font-display); font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1; }
+  .flap__tile { position: relative; width: 1.02em; height: 1.38em; border-radius: 5px; color: #f0d79c; box-shadow: inset 0 0 0 1px rgba(228, 197, 135, 0.5), 0 5px 12px rgba(0, 0, 0, 0.45); }
+  .flap__tile::after { content: ""; position: absolute; left: 0; right: 0; top: calc(50% - 0.5px); height: 1px; z-index: 3; background: rgba(0, 0, 0, 0.75); box-shadow: 0 1px 0 rgba(228, 197, 135, 0.2); }
+  .flap__half { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; }
+  .flap__half--top { top: 0; border-radius: 5px 5px 0 0; background: linear-gradient(#1f2d4c, #15203a); }
+  .flap__half--bot { bottom: 0; border-radius: 0 0 5px 5px; background: linear-gradient(#111a30, #0a1121); }
+  .flap__half b { display: block; height: 1.38em; line-height: 1.38em; text-align: center; font-weight: 400; }
+  .flap__half--bot b, .flap__half--back b { transform: translateY(-50%); }
+  .flap__leaf { position: absolute; left: 0; right: 0; top: 0; height: 50%; z-index: 2; transform-origin: 50% 100%; transform-style: preserve-3d; visibility: hidden; }
+  .flap__leaf .flap__half { height: 100%; backface-visibility: hidden; }
+  .flap__half--back { top: 0; border-radius: 0 0 5px 5px; transform: rotateX(180deg); background: linear-gradient(#111a30, #0a1121); }
+
+  /* the page odometer beside the clock: drums of figures behind a brass plate */
+  .odo { position: fixed; right: calc(clamp(34px, 3.2vw, 48px) + 104px); bottom: calc(clamp(18px, 3.4vh, 32px) + 24px); z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 4px; opacity: 0; transition: opacity 0.8s ease; pointer-events: none; }
+  body.is-past-hero .odo { opacity: 1; }
+  body.is-after-act .odo { opacity: 0; }
+  .odo__label { font-family: var(--font-hud); font-size: 9px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(228, 197, 135, 0.85); text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8); }
+  .odo__drums { display: flex; gap: 2px; padding: 3px 4px; border-radius: 4px; background: linear-gradient(#5e4420, #d8b46a 45%, #6e5124); box-shadow: 0 5px 14px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(40, 26, 8, 0.5); }
+  .odo__drum { position: relative; width: 0.92em; height: 1.32em; overflow: hidden; border-radius: 2px; background: #0a0f1a; font-family: var(--sc-font-display); font-size: 17px; color: #f1dca4; }
+  .odo__drum::after { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(0, 0, 0, 0.7), transparent 32%, transparent 68%, rgba(0, 0, 0, 0.7)); pointer-events: none; }
+  .odo__strip { display: block; white-space: pre; text-align: center; line-height: 1.32em; will-change: transform; transition: transform 0.55s cubic-bezier(0.3, 1.5, 0.5, 1); }
+
+  /* the winding key under the frontispiece: it ratchets round, and turns as the page starts to scroll */
+  .windup { position: absolute; left: 50%; bottom: clamp(1rem, 3.5vh, 2.2rem); translate: -50% 0; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+  body.is-ready .windup { opacity: 1; transition-delay: 2.4s; }
+  body.is-past-hero .windup { opacity: 0; transition-delay: 0s; }
+  .windup__key { width: 58px; height: 31px; overflow: visible; will-change: transform; filter: none; animation: windup 2.6s cubic-bezier(0.5, 0, 0.3, 1) infinite; rotate: calc(var(--spin, 0) * 3deg); }
+  body.is-past-hero .windup__key { animation-play-state: paused; }
+  @keyframes windup { 0% { transform: rotate(0deg); } 14% { transform: rotate(52deg); } 19%, 50% { transform: rotate(45deg); } 64% { transform: rotate(97deg); } 69%, 100% { transform: rotate(90deg); } }
+  .windup__text { font-family: var(--sc-font-display); font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(241, 230, 204, 0.85); text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9); }
+
+  /* two small wheels at the head of each title's line of light, turning while the caption is up */
+  .fx-ruleline { display: flex; align-items: center; margin: -0.3rem 0 1.05rem; }
+  .fx-ruleline .fx-rule { margin: 0 0 0 0.6rem; }
+  .beat--study .fx-ruleline, .beat--finale .fx-ruleline { justify-content: center; }
+  .fx-gear { flex: none; overflow: visible; will-change: transform; animation: works-a 7s linear infinite paused; opacity: 0; transition: opacity 0.6s ease 0.3s; }
+  .fx-gear--a path { fill: #c9a159; }
+  .fx-gear--b { margin-left: -5.33px; animation-name: gear-rev; animation-duration: 4.67s; }
+  .fx-gear--b path { fill: var(--glass); }
+  .beat.is-live .fx-gear { animation-play-state: running; opacity: 1; }
+  @keyframes gear-rev { from { transform: rotate(22.5deg); } to { transform: rotate(-337.5deg); } }
+
+  /* the ending's clockwork, in sepia behind its title */
+  .finale__works { position: absolute; left: 50%; top: -60%; width: 380px; height: 260px; translate: -50% 0; z-index: -1; pointer-events: none; opacity: 0.9; }
+  .finale__wheel { position: absolute; overflow: visible; will-change: transform; animation: works-a 60s linear infinite paused; }
+  .finale__wheel path { fill: rgba(122, 78, 30, 0.1); stroke: rgba(96, 60, 22, 0.7); stroke-width: 1.5; }
+  .finale__wheel--a { left: 0; top: 30px; }
+  .finale__wheel--b { left: 191px; top: 25px; /* its centre 153.33 from the first: r1 + r2, so they mesh */ animation-name: finale-rev; animation-duration: 32s; }
+  @keyframes finale-rev { from { transform: rotate(11.25deg); } to { transform: rotate(-348.75deg); } }
+  body.is-finale .finale__wheel { animation-play-state: running; }
+
+  /* the Contents: its wheel turns while the page is open */
+  .toc__gear { width: 18px; height: 18px; overflow: visible; }
+  .toc__gear path { fill: #9a7633; }
+  .chapters:not([hidden]) .toc__gear { animation: works-a 9s linear infinite; }
+
+  @media (max-width: 860px) {
+    .odo { display: none; }
+    .windup { bottom: 0.8rem; }
+    .windup__text { font-size: 9px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .windup__key, .fx-gear, .finale__wheel, .chapters:not([hidden]) .toc__gear { animation: none; rotate: none; }
+    .odo__strip { transition: none; }
+  }
+
+  /* ---- inside the edition: the 3D book reel, after the journey ----
+     The reel stands like a phone in a gilt frame; the copy says what the pages hold. */
+  .edition {
+    position: relative;
+    padding: clamp(5rem, 14svh, 9rem) clamp(1.25rem, 6vw, 6rem) clamp(3rem, 8svh, 5rem);
+  }
+  .edition__inner {
+    display: grid;
+    grid-template-columns: auto minmax(0, 30rem);
+    align-items: center;
+    justify-content: center;
+    gap: clamp(2.5rem, 7vw, 7rem);
+  }
+  .edition__reel { margin: 0; }
+  .edition__frame {
+    position: relative;
+    height: min(78svh, 46rem);
+    aspect-ratio: 9 / 16;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #05080f;
+    border: 1px solid rgba(228, 197, 135, 0.45);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 6px rgba(228, 197, 135, 0.06), inset 0 1px 0 rgba(255, 236, 196, 0.12);
+  }
+  .edition__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  .edition__toggle,
+  .edition__sound {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 8px 14px 8px 11px;
+    border: 1px solid rgba(228, 197, 135, 0.55);
+    border-radius: 999px;
+    background: rgba(8, 11, 18, 0.62);
+    color: var(--gilt);
+    font-family: var(--sc-font-display);
+    font-size: 0.62rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    opacity: 0.55;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+  .edition__frame:hover .edition__toggle,
+  .edition__toggle:focus-visible,
+  .edition__toggle[aria-pressed="false"],
+  .edition__frame:hover .edition__sound,
+  .edition__sound:focus-visible,
+  .edition__sound[aria-pressed="false"] { opacity: 1; }
+  .edition__toggle:hover,
+  .edition__sound:hover { background: rgba(228, 197, 135, 0.18); }
+  .edition__toggle:focus-visible,
+  .edition__sound:focus-visible { outline: 2px solid var(--gilt); outline-offset: 3px; }
+  .edition__toggle svg { width: 10px; height: 10px; }
+  .edition__reel figcaption {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--sc-ink-soft);
+  }
+  .edition__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin: 0 0 1.4rem;
+    font-family: var(--sc-font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.44em;
+    text-transform: uppercase;
+    color: var(--sc-ink-soft);
+  }
+  .edition__eyebrow .star { font-size: 0.8rem; color: var(--gilt); }
+  .edition__title {
+    margin: 0 0 1.3rem;
+    font-family: var(--sc-font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 3.4vw, 3rem);
+    line-height: 1.12;
+    text-wrap: balance;
+    color: var(--gilt);
+    text-shadow: 0 1px 0 rgba(30, 18, 4, 0.9), 0 18px 40px rgba(0, 0, 0, 0.5);
+  }
+  .edition__text {
+    max-width: 30rem;
+    margin: 0;
+    font-size: clamp(1.1rem, 1rem + 0.4vw, 1.3rem);
+    line-height: 1.6;
+    text-wrap: pretty;
+    color: #cdd5e5;
+  }
+  .edition__facts {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: 1.1rem 2.8rem;
+    margin: 2rem 0 0;
+    padding: 1.4rem 0 0;
+    border-top: 1px solid rgba(228, 197, 135, 0.25);
+  }
+  .edition__facts dt {
+    font-family: var(--sc-font-display);
+    font-size: 0.66rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sc-ink-soft);
+  }
+  .edition__facts dd {
+    margin: 0.3rem 0 0;
+    font-family: var(--sc-font-display);
+    font-size: 1.35rem;
+    color: var(--sc-ink);
+  }
+  @media (max-width: 860px) {
+    .edition__inner { grid-template-columns: 1fr; justify-items: center; gap: 2.4rem; }
+    .edition__frame { height: auto; width: min(78vw, 22rem); }
+    .edition__copy { text-align: center; }
+    .edition__eyebrow, .edition__facts { justify-content: center; }
+  }
+
+  /* ---- where to buy the book ---- */
+  .topbar__right { display: inline-flex; align-items: center; gap: 10px; }
+  .buy-pill {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--gilt);
+    color: #17110a;
+    font: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .buy-pill:hover { transform: translateY(-1px); background: #f0d79e; }
+  .buy-pill:focus-visible { outline: 2px solid var(--gilt); outline-offset: 3px; }
+  .buy-pill .short { display: none; }
+  .hero__buy {
+    color: var(--gilt);
+    font-family: var(--sc-font-display);
+    font-size: 0.76rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(228, 197, 135, 0.5);
+    transition: border-color 0.3s ease;
+  }
+  .hero__buy:hover { border-bottom-color: var(--gilt); }
+  .hero__buy:focus-visible { outline: 2px solid var(--gilt); outline-offset: 4px; }
+  .edition__buy, .finale__buy { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
+  .buy-btn {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.95rem 1.5rem;
+    border: 1px solid rgba(228, 197, 135, 0.75);
+    border-radius: 999px;
+    color: var(--gilt);
+    font-family: var(--sc-font-display);
+    font-size: 0.74rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  }
+  .buy-btn small { font-family: var(--sc-font-text); font-size: 0.95rem; font-style: italic; letter-spacing: 0.02em; text-transform: none; opacity: 0.8; }
+  .buy-btn--primary { background: var(--gilt); color: #17110a; }
+  .buy-btn:hover { transform: translateY(-2px); background: var(--gilt); color: #17110a; }
+  .buy-btn:focus-visible { outline: 2px solid var(--gilt); outline-offset: 4px; }
+  /* at dawn the ground is pale, so the closing links are in ink; clickable only while they show */
+  .finale__buy { justify-content: center; margin-top: 1.3rem; }
+  .finale__buy .buy-btn { border-color: rgba(59, 38, 17, 0.85); background: rgba(250, 238, 214, 0.6); color: #3b2611; }
+  .finale__buy .buy-btn--primary { background: #3b2611; color: #f6e7c8; }
+  .finale__buy .buy-btn:hover { background: #3b2611; color: #f6e7c8; }
+  body.is-finale .finale__buy { pointer-events: auto; }
+  @media (max-width: 860px) {
+    .buy-pill { padding: 9px 14px; }
+    .buy-pill .long { display: none; }
+    .buy-pill .short { display: inline; }
+    .edition__buy { justify-content: center; }
+  }
+
+  /* the out-now section mirrors the edition: copy on the left, the reel on the right */
+  .edition--flip { padding-bottom: 0; }
+  .edition--flip .edition__inner { grid-template-columns: minmax(0, 30rem) auto; }
+  .edition--flip .edition__reel { order: 2; }
+  @media (max-width: 860px) {
+    .edition--flip .edition__inner { grid-template-columns: 1fr; }
+    .edition--flip .edition__reel { order: 0; }
+  }
+  /* the Sound button shares the play button's look, in the other corner */
+  .edition__sound { right: auto; left: 14px; }
+  .edition__sound svg { width: 13px; height: 11px; }
+
+  /* ===== the frame around the book: skip link, ribbon, contents page, night seam, colophon ===== */
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  [tabindex="-1"]:focus { outline: none; }
+
+  /* For keyboards and screen readers: the tour is thirty screens long. */
+  .skip {
+    position: fixed; left: 50%; top: 74px; z-index: 12;
+    padding: 10px 16px; border-radius: 999px;
+    background: var(--parchment); color: #1a130a;
+    font-family: var(--sc-font-display); font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; text-decoration: none;
+    transform: translate(-50%, -260%); transition: transform 0.3s var(--ease-out);
+  }
+  .skip:focus-visible { transform: translate(-50%, 0); outline: 2px solid var(--gilt); outline-offset: 3px; }
+
+  /* The ribbon bookmark: it hangs from the top edge and lengthens as the reader goes through the book. */
+  .ribbon {
+    position: fixed; top: 0; right: clamp(10px, 1.1vw, 16px); z-index: 4;
+    width: 12px; height: 28px;
+    background: linear-gradient(90deg, #56101a, #9d2435 46%, #74151f);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 9px), 0 100%);
+    opacity: 0; transition: opacity 0.7s ease; pointer-events: none;
+  }
+  .ribbon::before { content: ""; position: absolute; inset: 0 2.5px; border-inline: 1px dashed rgba(226, 194, 131, 0.35); }
+  body.is-past-hero .ribbon { opacity: 0.92; }
+  body.is-after-act .ribbon, body.is-inside .ribbon { opacity: 0; }
+
+  /* Contents: a page from the book itself, with the printed edition's page numbers. */
+  .chapters {
+    position: fixed; top: 70px; right: clamp(0.75rem, 3.2vw, 2.75rem); z-index: 6;
+    width: min(430px, calc(100vw - 24px)); max-height: calc(100svh - 92px);
+    overflow: auto; overscroll-behavior: contain;
+    padding: 28px 18px 18px; border-radius: 3px;
+    color: #241b10;
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .1  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url%28%23n%29' opacity='.22'/%3E%3C/svg%3E"),
+      radial-gradient(130% 70% at 0% 0%, rgba(255, 251, 238, 0.85), transparent 60%),
+      radial-gradient(120% 90% at 100% 110%, rgba(160, 118, 58, 0.24), transparent 65%),
+      #eee1c2;
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(110, 80, 36, 0.3), inset 0 0 70px rgba(130, 92, 38, 0.2);
+    transform-origin: calc(100% - 70px) -12px;
+    scrollbar-width: thin; scrollbar-color: rgba(110, 80, 36, 0.45) transparent;
+  }
+  .chapters:not([hidden]) { animation: toc-open 0.5s var(--ease-out) both; }
+  @keyframes toc-open { from { opacity: 0; transform: translateY(-10px) rotate(-1.2deg) scale(0.97); } }
+  .toc__head { text-align: center; margin: 0 0 14px; }
+  .toc__kicker { margin: 0; font-family: var(--sc-font-display); font-size: 9.5px; letter-spacing: 0.34em; text-transform: uppercase; color: #8a6a2c; }
+  .toc__title { margin: 6px 0 10px; padding-left: 0.32em; font-family: var(--sc-font-display); font-weight: 400; font-size: 25px; letter-spacing: 0.32em; text-transform: uppercase; color: #1d150b; }
+  .toc__rule { display: flex; align-items: center; justify-content: center; gap: 10px; color: #9a7633; }
+  .toc__rule i { width: 64px; height: 1px; background: rgba(110, 80, 36, 0.45); }
+  .toc__rule .star, .toc__note .star { font-size: 9px; }
+  .toc__note { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 10px 0 0; font-size: 14.5px; font-style: italic; color: #6b5536; }
+  .toc__note .star { color: #9a7633; }
+  .chapters ol { margin: 0; padding: 0; list-style: none; }
+  .chapters:not([hidden]) li { animation: toc-line 0.55s var(--ease-out) both; animation-delay: calc(60ms + var(--i) * 14ms); }
+  @keyframes toc-line { from { opacity: 0; transform: translateY(4px); } }
+  .toc__row {
+    display: grid; grid-template-columns: 1.9rem minmax(0, 1fr) auto; align-items: baseline; column-gap: 10px;
+    width: 100%; padding: 4px 10px; border: 0; border-radius: 3px; background: none;
+    font: inherit; font-size: 17px; line-height: 1.35; text-align: left;
+    color: rgba(36, 27, 16, 0.52);
+  }
+  .toc__row--tour { color: #1d150b; cursor: pointer; }
+  .toc__row--tour:hover, .toc__row--tour:focus-visible { background: rgba(140, 100, 40, 0.13); outline: none; }
+  .toc__row--tour:focus-visible { box-shadow: 0 0 0 1.5px rgba(138, 106, 44, 0.85); }
+  .toc__row[aria-current="true"] { background: rgba(143, 29, 44, 0.09); box-shadow: inset 3px 0 0 #8f1d2c; }
+  .toc__num, .toc__page { font-family: var(--sc-font-display); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .toc__num { text-align: right; color: #9a7633; }
+  .toc__row:not(.toc__row--tour) .toc__num { color: rgba(154, 118, 51, 0.6); }
+  .toc__name { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+  .toc__name::after { content: ""; flex: 1 1 18px; min-width: 18px; border-bottom: 1.5px dotted currentColor; opacity: 0.38; translate: 0 -5px; }
+  .toc__star { font-size: 9px; color: #9a7633; translate: 0 -1px; }
+  .toc__row--matter { font-style: italic; }
+  .toc__row--matter .toc__name::after { visibility: hidden; }
+  .toc__gap { height: 8px; }
+
+  /* Where the tour ends, its world sinks into the night instead of stopping at an edge. */
+  #out-now::before {
+    content: ""; position: absolute; left: 0; right: 0; top: -28svh; height: 28svh; z-index: 2; pointer-events: none;
+    background: linear-gradient(to bottom, rgba(7, 11, 22, 0), rgba(7, 11, 22, 0.55) 55%, rgba(7, 11, 22, 0.92));
+  }
+  @media (max-width: 860px) { #out-now::before { top: -9svh; height: 9svh; } }
+  .edition__reel { position: relative; }
+  .edition__reel::before {
+    content: ""; position: absolute; left: 50%; top: 46%; width: 170%; aspect-ratio: 1; translate: -50% -50%; z-index: -1;
+    border-radius: 50%; pointer-events: none;
+    background: radial-gradient(closest-side, rgba(226, 194, 131, 0.14), rgba(226, 194, 131, 0.04) 55%, transparent 72%);
+  }
+
+  /* a printer's ornament between the sections */
+  .fleuron { display: flex; align-items: center; justify-content: center; gap: 18px; padding-top: clamp(3rem, 9svh, 6rem); color: var(--gilt); }
+  .fleuron i { width: min(22vw, 170px); height: 1px; background: linear-gradient(90deg, transparent, rgba(226, 194, 131, 0.65)); }
+  .fleuron i:last-child { transform: scaleX(-1); }
+  .fleuron .star { font-size: 14px; }
+
+  /* The colophon: the last page, as a printed book would end. */
+  .colophon {
+    display: grid; justify-items: center; text-align: center;
+    padding: clamp(2.5rem, 7svh, 5rem) clamp(1.25rem, 6vw, 6rem) clamp(4rem, 12svh, 8rem);
+  }
+  .colophon__device { width: 112px; height: 112px; margin-bottom: 1.6rem; color: var(--gilt); }
+  .colophon__device svg { display: block; width: 100%; height: 100%; overflow: visible; }
+  .colophon__device .ring { fill: none; stroke: currentColor; stroke-opacity: 0.5; stroke-width: 1; }
+  .colophon__device .ticks { fill: none; stroke: currentColor; stroke-opacity: 0.75; stroke-width: 3; stroke-dasharray: 0.8 9.88; transform-origin: 60px 60px; animation: device-turn 90s linear infinite; }
+  @keyframes device-turn { to { transform: rotate(360deg); } }
+  .colophon__kicker { margin: 0 0 0.9rem; padding-left: 0.5em; font-family: var(--sc-font-display); font-size: 0.7rem; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gilt); }
+  .colophon__title { margin: 0; font-family: var(--sc-font-display); font-weight: 400; font-size: clamp(2rem, 1.3rem + 2.6vw, 3.3rem); line-height: 1.05; letter-spacing: 0.04em; color: var(--gilt); }
+  .colophon__sub { margin: 0.6rem 0 1.7rem; font-style: italic; font-size: clamp(1.15rem, 1rem + 0.6vw, 1.45rem); color: var(--parchment); }
+  .colophon__text { max-width: 33rem; margin: 0 0 2rem; text-wrap: balance; font-size: 1.14rem; line-height: 1.65; color: var(--sc-ink-soft); }
+  .colophon__actions { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px 14px; margin-bottom: 2.4rem; }
+  .colophon__again {
+    display: inline-flex; align-items: center; gap: 0.55rem; padding: 10px 6px; border: 0; background: none; cursor: pointer;
+    font-family: var(--sc-font-display); font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gilt);
+  }
+  .colophon__again svg { width: 10px; height: 12px; transition: transform 0.4s var(--ease-out); }
+  .colophon__again:hover svg { transform: translateY(-3px); }
+  .colophon__again:focus-visible { outline: 2px solid var(--gilt); outline-offset: 3px; border-radius: 4px; }
+  .colophon__fine { max-width: 33rem; margin: 0; text-wrap: balance; font-size: 0.95rem; line-height: 1.6; color: rgba(169, 180, 204, 0.78); }
+  .colophon__fine a { color: inherit; text-underline-offset: 3px; text-decoration-color: rgba(226, 194, 131, 0.5); }
+  .colophon__fine a:hover { color: var(--gilt); }
+  .colophon__copy { margin: 1.3rem 0 0; font-family: var(--sc-font-display); font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(169, 180, 204, 0.6); }
+
+  @media (max-width: 560px) {
+    .brand__name { display: none; }
+    .ribbon { right: 4px; width: 8px; }
+    .chapters { top: 62px; right: 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body::after, .colophon__device .ticks, .chapters:not([hidden]), .chapters:not([hidden]) li { animation: none; }
+    .skip, .ribbon { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- The four-point star from the cover, reused as the page's one ornament. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 24 24">
+    <path d="M12 0C12.7 7.4 16.6 11.3 24 12 16.6 12.7 12.7 16.6 12 24 11.3 16.6 7.4 12.7 0 12 7.4 11.3 11.3 7.4 12 0Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<a class="skip" href="#out-now">Skip the tour</a>
+<div class="ribbon" aria-hidden="true" id="ribbon"></div>
+<!-- The reading clock (js/machine.js): its hands keep the reader's place; a click opens the Contents. -->
+<button id="reading-clock" class="clock" type="button" aria-label="Contents"></button>
+<!-- The page odometer (js/machine.js): the printed page the reader has reached. -->
+<div id="odometer" class="odo" aria-hidden="true"><span class="odo__label">Page</span><span class="odo__drums"></span></div>
+
+<div id="loader" class="loader">
+  <!-- two wheels of the grandfather's machine, meshing while the book opens -->
+  <svg class="loader-works" viewBox="0 0 120 80" aria-hidden="true">
+    <g transform="translate(42 42)"><path class="loader-wheel loader-wheel--a" d="M27.12 0.00 L27.07 1.70 L32.65 3.89 L32.11 7.06 L26.12 7.29 L25.48 9.28 L24.85 10.86 L29.35 14.82 L27.76 17.62 L22.05 15.79 L20.78 17.43 L19.64 18.70 L22.51 23.97 L20.06 26.05 L15.32 22.38 L13.56 23.49 L12.06 24.29 L12.95 30.22 L9.94 31.34 L6.74 26.27 L4.71 26.71 L3.02 26.95 L1.84 32.83 L-1.38 32.85 L-2.65 26.99 L-4.71 26.71 L-6.38 26.36 L-9.50 31.48 L-12.53 30.40 L-11.72 24.46 L-13.56 23.49 L-15.01 22.59 L-19.70 26.33 L-22.17 24.28 L-19.38 18.98 L-20.78 17.43 L-21.83 16.09 L-27.51 18.00 L-29.14 15.23 L-24.70 11.20 L-25.48 9.28 L-26.02 7.66 L-32.01 7.51 L-32.59 4.35 L-27.04 2.08 L-27.12 0.00 L-27.07 -1.70 L-32.65 -3.89 L-32.11 -7.06 L-26.12 -7.29 L-25.48 -9.28 L-24.85 -10.86 L-29.35 -14.82 L-27.76 -17.62 L-22.05 -15.79 L-20.78 -17.43 L-19.64 -18.70 L-22.51 -23.97 L-20.06 -26.05 L-15.32 -22.38 L-13.56 -23.49 L-12.06 -24.29 L-12.95 -30.22 L-9.94 -31.34 L-6.74 -26.27 L-4.71 -26.71 L-3.02 -26.95 L-1.84 -32.83 L1.38 -32.85 L2.65 -26.99 L4.71 -26.71 L6.38 -26.36 L9.50 -31.48 L12.53 -30.40 L11.72 -24.46 L13.56 -23.49 L15.01 -22.59 L19.70 -26.33 L22.17 -24.28 L19.38 -18.98 L20.78 -17.43 L21.83 -16.09 L27.51 -18.00 L29.14 -15.23 L24.70 -11.20 L25.48 -9.28 L26.02 -7.66 L32.01 -7.51 L32.59 -4.35 L27.04 -2.08 Z M9.41 1.90 L19.14 3.87 A19.53 19.53 0 0 1 9.60 17.00 L4.72 8.36 A9.60 9.60 0 0 0 9.41 1.90 Z M1.10 9.54 L2.23 19.40 A19.53 19.53 0 0 1 -13.21 14.38 L-6.49 7.07 A9.60 9.60 0 0 0 1.10 9.54 Z M-8.73 3.99 L-17.76 8.12 A19.53 19.53 0 0 1 -17.76 -8.12 L-8.73 -3.99 A9.60 9.60 0 0 0 -8.73 3.99 Z M-6.49 -7.07 L-13.21 -14.38 A19.53 19.53 0 0 1 2.23 -19.40 L1.10 -9.54 A9.60 9.60 0 0 0 -6.49 -7.07 Z M4.72 -8.36 L9.60 -17.00 A19.53 19.53 0 0 1 19.14 -3.87 L9.41 -1.90 A9.60 9.60 0 0 0 4.72 -8.36 Z M4.20 0 A4.20 4.20 0 1 0 -4.20 0 A4.20 4.20 0 1 0 4.20 0 Z" fill-rule="evenodd"/></g>
+    <g transform="translate(88.67 42)"><path class="loader-wheel loader-wheel--b" d="M13.79 0.00 L13.70 1.56 L19.11 4.14 L18.09 7.42 L12.17 6.49 L11.16 8.11 L10.17 9.31 L13.02 14.58 L10.27 16.64 L6.03 12.40 L4.26 13.11 L2.75 13.51 L1.96 19.45 L-1.47 19.49 L-2.41 13.58 L-4.26 13.11 L-5.71 12.55 L-9.85 16.89 L-12.65 14.91 L-9.93 9.57 L-11.16 8.11 L-12.00 6.79 L-17.89 7.88 L-19.00 4.62 L-13.66 1.90 L-13.79 0.00 L-13.70 -1.56 L-19.11 -4.14 L-18.09 -7.42 L-12.17 -6.49 L-11.16 -8.11 L-10.17 -9.31 L-13.02 -14.58 L-10.27 -16.64 L-6.03 -12.40 L-4.26 -13.11 L-2.75 -13.51 L-1.96 -19.45 L1.47 -19.49 L2.41 -13.58 L4.26 -13.11 L5.71 -12.55 L9.85 -16.89 L12.65 -14.91 L9.93 -9.57 L11.16 -8.11 L12.00 -6.79 L17.89 -7.88 L19.00 -4.62 L13.66 -1.90 Z M3.33 0 A3.33 3.33 0 1 0 -3.33 0 A3.33 3.33 0 1 0 3.33 0 Z" fill-rule="evenodd"/></g>
+  </svg>
+  <p class="loader-title">Amelia and the Mirror</p>
+  <p class="loader-note">Opening the book…</p>
+</div>
+
+<header class="topbar">
+  <span class="brand"><svg class="star" aria-hidden="true"><use href="#star"/></svg><span class="brand__name">Amelia and the Mirror</span></span>
+  <div class="topbar__right">
+    <button id="chapters-toggle" class="chapters-toggle" type="button" aria-expanded="false" aria-controls="chapters">
+      <svg class="toc-icon" viewBox="0 0 14 10" aria-hidden="true"><path d="M0 1h14M0 5h10M0 9h14" stroke="currentColor" stroke-width="1.2"/></svg>
+      Contents
+    </button>
+    <a class="buy-pill" data-store="all" href="https://books2read.com/u/4D08z7" target="_blank" rel="noopener"><span class="long">Get the book</span><span class="short">Buy</span></a>
+  </div>
+</header>
+
+<nav id="chapters" class="chapters" hidden aria-labelledby="toc-title">
+  <header class="toc__head">
+    <p class="toc__kicker">Amelia and the Mirror · Book One</p>
+    <h2 id="toc-title" class="toc__title">Contents</h2>
+    <div class="toc__rule" aria-hidden="true"><i></i><svg class="toc__gear" viewBox="-9 -9 18 18" width="18" height="18" aria-hidden="true"><path d="M6.14 0.00 L6.12 0.50 L7.77 1.20 L7.56 2.16 L5.76 2.10 L5.53 2.66 L5.30 3.10 L6.48 4.45 L5.88 5.23 L4.28 4.40 L3.83 4.80 L3.43 5.09 L3.91 6.82 L3.03 7.26 L1.95 5.82 L1.37 5.98 L0.88 6.07 L0.56 7.84 L-0.42 7.85 L-0.77 6.09 L-1.37 5.98 L-1.84 5.85 L-2.89 7.31 L-3.79 6.89 L-3.33 5.15 L-3.83 4.80 L-4.20 4.47 L-5.78 5.33 L-6.40 4.57 L-5.24 3.19 L-5.53 2.66 L-5.73 2.21 L-7.52 2.30 L-7.75 1.33 L-6.11 0.60 L-6.14 0.00 L-6.12 -0.50 L-7.77 -1.20 L-7.56 -2.16 L-5.76 -2.10 L-5.53 -2.66 L-5.30 -3.10 L-6.48 -4.45 L-5.88 -5.23 L-4.28 -4.40 L-3.83 -4.80 L-3.43 -5.09 L-3.91 -6.82 L-3.03 -7.26 L-1.95 -5.82 L-1.37 -5.98 L-0.88 -6.07 L-0.56 -7.84 L0.42 -7.85 L0.77 -6.09 L1.37 -5.98 L1.84 -5.85 L2.89 -7.31 L3.79 -6.89 L3.33 -5.15 L3.83 -4.80 L4.20 -4.47 L5.78 -5.33 L6.40 -4.57 L5.24 -3.19 L5.53 -2.66 L5.73 -2.21 L7.52 -2.30 L7.75 -1.33 L6.11 -0.60 Z M2.19 0.46 L4.32 0.90 A4.42 4.42 0 0 1 0.90 4.32 L0.46 2.19 A2.24 2.24 0 0 0 2.19 0.46 Z M-0.46 2.19 L-0.90 4.32 A4.42 4.42 0 0 1 -4.32 0.90 L-2.19 0.46 A2.24 2.24 0 0 0 -0.46 2.19 Z M-2.19 -0.46 L-4.32 -0.90 A4.42 4.42 0 0 1 -0.90 -4.32 L-0.46 -2.19 A2.24 2.24 0 0 0 -2.19 -0.46 Z M0.46 -2.19 L0.90 -4.32 A4.42 4.42 0 0 1 4.32 -0.90 L2.19 -0.46 A2.24 2.24 0 0 0 0.46 -2.19 Z M1.54 0 A1.54 1.54 0 1 0 -1.54 0 A1.54 1.54 0 1 0 1.54 0 Z" fill-rule="evenodd"/></svg><i></i></div>
+    <p class="toc__note"><svg class="star" aria-hidden="true"><use href="#star"/></svg>marks the places you can step into here</p>
+  </header>
+  <ol id="chapters-list"></ol>
+</nav>
+
+<main id="top">
+  <!-- One pinned act. The book, the copy and the scroll all live here.
+       data-sc-span is set at runtime from the page timeline (js/main.js). -->
+  <section id="book" data-sc-act="pin" data-sc-span="30" aria-label="Amelia and the Mirror, page by page">
+    <div data-sc-stage class="stage">
+      <canvas id="scene3d" aria-label="The book, opening and turning under scroll"></canvas>
+      <!-- The world inside the page. It opens out of the page's picture through a soft circular mask. -->
+      <div id="portal" class="portal">
+        <canvas id="inside3d" aria-label="The chapter's illustrations, inside the page"></canvas>
+      </div>
+      <!-- The portal's edge: a gate of the Mirror's light, its rings and runes turning. -->
+      <div id="portal-ring" class="portal-ring" aria-hidden="true">
+        <svg class="gate" viewBox="0 0 200 200">
+          <defs><path id="gate-path" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+          <circle class="gate__band" cx="100" cy="100" r="89"/>
+          <circle class="gate__rim" cx="100" cy="100" r="99"/>
+          <g class="gate__ticks"><circle cx="100" cy="100" r="95"/><animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="48s" repeatCount="indefinite"/></g>
+          <g class="gate__arcs"><circle cx="100" cy="100" r="91"/><animateTransform attributeName="transform" type="rotate" from="360 100 100" to="0 100 100" dur="16s" repeatCount="indefinite"/></g>
+          <g class="gate__runes"><text><textPath href="#gate-path" textLength="535" lengthAdjust="spacing">ᚠ ◇ ᚢ ⌬ ᚦ Δ ᚨ ◈ ᚱ Ψ ᚲ ⟁ ᛉ Ω ᛟ ∴ Ξ ᚠ Φ ᚢ Λ ᚦ ⊹ ᚨ Σ ᚱ ◇ ᚲ Π ᛉ ⌬ ᛟ Δ ᚠ ◈ ᚢ Ψ ᚦ ⟁ ᚨ Ω ᚱ ∴ ᚲ Ξ ᛉ Φ ᛟ Λ</textPath></text><animateTransform attributeName="transform" type="rotate" from="0 100 100" to="-360 100 100" dur="70s" repeatCount="indefinite"/></g>
+          <defs><clipPath id="gate-bore"><circle cx="100" cy="100" r="80"/></clipPath>
+            <linearGradient id="gate-steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b342c"/><stop offset="0.55" stop-color="#1c1814"/><stop offset="1" stop-color="#4a3f30"/></linearGradient></defs>
+          <!-- the iris: blades on pivots round the bore, swung back as the portal opens (--open) -->
+          <g class="gate__iris" clip-path="url(#gate-bore)"><g transform="rotate(0 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(45 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(90 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(135 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(180 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(225 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(270 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g><g transform="rotate(315 100 100)"><path class="gate__blade" d="M100 20 C128 22 152 34 166 52 L124 112 C110 100 94 96 78 98 Z"/></g></g>
+          <circle class="gate__inner" cx="100" cy="100" r="80"/>
+        </svg>
+      </div>
+      <!-- Light streaks while the reader falls through the page (js/scifi.js). -->
+      <canvas id="warp" class="warp" aria-hidden="true"></canvas>
+      <!-- Lamplight: what the reader passes through at the study window. -->
+      <div id="veil" class="veil" aria-hidden="true"></div>
+      <!-- A readout while the reader is inside a chapter (js/scifi.js). -->
+      <div id="hud" class="hud" aria-hidden="true">
+        <p class="hud__tag"><span class="hud__dot"></span>Inside the page</p>
+        <p class="hud__title" data-hud="title"></p>
+        <p class="hud__row"><span data-hud="page"></span><span class="hud__sep"></span><span data-hud="time"></span></p>
+        <p class="hud__row"><span data-hud="scene"></span><span class="hud__bars" data-hud="bars"></span></p>
+        <svg class="hud__wave" viewBox="0 0 120 16" preserveAspectRatio="none"><path data-hud="wave" d="M0 8 L120 8"/></svg>
+      </div>
+      <!-- Under the frontispiece: a winding key, turning, and an invitation to scroll. -->
+      <div class="windup" aria-hidden="true">
+        <svg class="windup__key" viewBox="-32 -17 64 34">
+          <defs><linearGradient id="key-brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbe7b0"/><stop offset="0.5" stop-color="#c9a159"/><stop offset="1" stop-color="#6e5124"/></linearGradient></defs>
+          <path fill="url(#key-brass)" fill-rule="evenodd" stroke="rgba(40,26,8,0.6)" stroke-width="0.6" d="M-6 -4 C-10 -15 -29 -16 -29 0 C-29 16 -10 15 -6 4 Z M-11 0 A6 6 0 1 0 -23 0 A6 6 0 1 0 -11 0 Z M6 -4 C10 -15 29 -16 29 0 C29 16 10 15 6 4 Z M23 0 A6 6 0 1 0 11 0 A6 6 0 1 0 23 0 Z"/>
+          <circle r="7" fill="url(#key-brass)" stroke="rgba(40,26,8,0.6)" stroke-width="0.6"/>
+          <circle r="2.2" fill="#2a1c0a"/>
+        </svg>
+        <span class="windup__text">Scroll to wind the story</span>
+      </div>
+      <div id="copy" class="copy-layer">
+        <!-- The frontispiece. Its scroll cue is set at runtime; it fades as the cover lifts. -->
+        <div id="hero" class="beat hero">
+          <svg class="hero__spark hero__spark--a" aria-hidden="true"><use href="#star"/></svg>
+          <svg class="hero__spark hero__spark--b" aria-hidden="true"><use href="#star"/></svg>
+          <svg class="hero__spark hero__spark--c" aria-hidden="true"><use href="#star"/></svg>
+          <div class="hero__works" aria-hidden="true">
+            <svg class="hero__wheel hero__wheel--a" viewBox="-170 -170 340 340" style="left:5.77%;top:7.14%;width:65.38%;height:80.95%"><path d="M154.24 0.00 L154.20 3.63 L165.60 7.37 L165.21 13.44 L153.44 15.72 L152.92 20.13 L152.40 23.73 L163.22 28.93 L162.05 34.89 L150.07 35.61 L148.98 39.92 L148.00 43.42 L158.04 49.98 L156.11 55.74 L144.14 54.90 L142.50 59.03 L141.07 62.37 L150.17 70.18 L147.50 75.64 L135.74 73.24 L133.58 77.12 L131.72 80.25 L139.72 89.18 L136.36 94.24 L125.02 90.33 L122.37 93.90 L120.12 96.75 L126.89 106.66 L122.89 111.24 L112.16 105.88 L109.06 109.06 L106.46 111.60 L111.88 122.31 L107.32 126.33 L97.38 119.61 L93.90 122.37 L90.99 124.55 L94.96 135.87 L89.91 139.25 L80.93 131.30 L77.12 133.58 L73.95 135.36 L76.41 147.10 L70.97 149.80 L63.10 140.74 L59.03 142.50 L55.65 143.85 L56.56 155.81 L50.81 157.78 L44.19 147.77 L39.92 148.98 L36.40 149.88 L35.74 161.86 L29.78 163.06 L24.53 152.28 L20.13 152.92 L16.52 153.35 L14.30 165.14 L8.24 165.55 L4.44 154.18 L0.00 154.24 L-3.63 154.20 L-7.37 165.60 L-13.44 165.21 L-15.72 153.44 L-20.13 152.92 L-23.73 152.40 L-28.93 163.22 L-34.89 162.05 L-35.61 150.07 L-39.92 148.98 L-43.42 148.00 L-49.98 158.04 L-55.74 156.11 L-54.90 144.14 L-59.03 142.50 L-62.37 141.07 L-70.18 150.17 L-75.64 147.50 L-73.24 135.74 L-77.12 133.58 L-80.25 131.72 L-89.18 139.72 L-94.24 136.36 L-90.33 125.02 L-93.90 122.37 L-96.75 120.12 L-106.66 126.89 L-111.24 122.89 L-105.88 112.16 L-109.06 109.06 L-111.60 106.46 L-122.31 111.88 L-126.33 107.32 L-119.61 97.38 L-122.37 93.90 L-124.55 90.99 L-135.87 94.96 L-139.25 89.91 L-131.30 80.93 L-133.58 77.12 L-135.36 73.95 L-147.10 76.41 L-149.80 70.97 L-140.74 63.10 L-142.50 59.03 L-143.85 55.65 L-155.81 56.56 L-157.78 50.81 L-147.77 44.19 L-148.98 39.92 L-149.88 36.40 L-161.86 35.74 L-163.06 29.78 L-152.28 24.53 L-152.92 20.13 L-153.35 16.52 L-165.14 14.30 L-165.55 8.24 L-154.18 4.44 L-154.24 0.00 L-154.20 -3.63 L-165.60 -7.37 L-165.21 -13.44 L-153.44 -15.72 L-152.92 -20.13 L-152.40 -23.73 L-163.22 -28.93 L-162.05 -34.89 L-150.07 -35.61 L-148.98 -39.92 L-148.00 -43.42 L-158.04 -49.98 L-156.11 -55.74 L-144.14 -54.90 L-142.50 -59.03 L-141.07 -62.37 L-150.17 -70.18 L-147.50 -75.64 L-135.74 -73.24 L-133.58 -77.12 L-131.72 -80.25 L-139.72 -89.18 L-136.36 -94.24 L-125.02 -90.33 L-122.37 -93.90 L-120.12 -96.75 L-126.89 -106.66 L-122.89 -111.24 L-112.16 -105.88 L-109.06 -109.06 L-106.46 -111.60 L-111.88 -122.31 L-107.32 -126.33 L-97.38 -119.61 L-93.90 -122.37 L-90.99 -124.55 L-94.96 -135.87 L-89.91 -139.25 L-80.93 -131.30 L-77.12 -133.58 L-73.95 -135.36 L-76.41 -147.10 L-70.97 -149.80 L-63.10 -140.74 L-59.03 -142.50 L-55.65 -143.85 L-56.56 -155.81 L-50.81 -157.78 L-44.19 -147.77 L-39.92 -148.98 L-36.40 -149.88 L-35.74 -161.86 L-29.78 -163.06 L-24.53 -152.28 L-20.13 -152.92 L-16.52 -153.35 L-14.30 -165.14 L-8.24 -165.55 L-4.44 -154.18 L-0.00 -154.24 L3.63 -154.20 L7.37 -165.60 L13.44 -165.21 L15.72 -153.44 L20.13 -152.92 L23.73 -152.40 L28.93 -163.22 L34.89 -162.05 L35.61 -150.07 L39.92 -148.98 L43.42 -148.00 L49.98 -158.04 L55.74 -156.11 L54.90 -144.14 L59.03 -142.50 L62.37 -141.07 L70.18 -150.17 L75.64 -147.50 L73.24 -135.74 L77.12 -133.58 L80.25 -131.72 L89.18 -139.72 L94.24 -136.36 L90.33 -125.02 L93.90 -122.37 L96.75 -120.12 L106.66 -126.89 L111.24 -122.89 L105.88 -112.16 L109.06 -109.06 L111.60 -106.46 L122.31 -111.88 L126.33 -107.32 L119.61 -97.38 L122.37 -93.90 L124.55 -90.99 L135.87 -94.96 L139.25 -89.91 L131.30 -80.93 L133.58 -77.12 L135.36 -73.95 L147.10 -76.41 L149.80 -70.97 L140.74 -63.10 L142.50 -59.03 L143.85 -55.65 L155.81 -56.56 L157.78 -50.81 L147.77 -44.19 L148.98 -39.92 L149.88 -36.40 L161.86 -35.74 L163.06 -29.78 L152.28 -24.53 L152.92 -20.13 L153.35 -16.52 L165.14 -14.30 L165.55 -8.24 L154.18 -4.44 Z M25.29 4.00 L131.02 20.71 A132.65 132.65 0 0 1 83.45 103.11 L16.11 19.90 A25.60 25.60 0 0 0 25.29 4.00 Z M9.18 23.90 L47.57 123.82 A132.65 132.65 0 0 1 -47.57 123.82 L-9.18 23.90 A25.60 25.60 0 0 0 9.18 23.90 Z M-16.11 19.90 L-83.45 103.11 A132.65 132.65 0 0 1 -131.02 20.71 L-25.29 4.00 A25.60 25.60 0 0 0 -16.11 19.90 Z M-25.29 -4.00 L-131.02 -20.71 A132.65 132.65 0 0 1 -83.45 -103.11 L-16.11 -19.90 A25.60 25.60 0 0 0 -25.29 -4.00 Z M-9.18 -23.90 L-47.57 -123.82 A132.65 132.65 0 0 1 47.57 -123.82 L9.18 -23.90 A25.60 25.60 0 0 0 -9.18 -23.90 Z M16.11 -19.90 L83.45 -103.11 A132.65 132.65 0 0 1 131.02 -20.71 L25.29 -4.00 A25.60 25.60 0 0 0 16.11 -19.90 Z M12.80 0 A12.80 12.80 0 1 0 -12.80 0 A12.80 12.80 0 1 0 12.80 0 Z" fill-rule="evenodd"/></svg>
+            <svg class="hero__wheel hero__wheel--b" viewBox="-74 -74 148 148" style="left:67.82%;top:30.00%;width:28.46%;height:35.24%"><path d="M60.91 0.00 L60.81 3.44 L72.02 7.72 L71.06 14.02 L59.09 14.78 L57.93 18.82 L56.77 22.07 L66.11 29.60 L63.25 35.29 L51.63 32.31 L49.28 35.80 L47.18 38.53 L53.72 48.58 L49.25 53.11 L39.12 46.69 L35.80 49.28 L32.96 51.22 L36.08 62.80 L30.43 65.73 L22.78 56.49 L18.82 57.93 L15.52 58.90 L14.91 70.88 L8.63 71.91 L4.21 60.76 L0.00 60.91 L-3.44 60.81 L-7.72 72.02 L-14.02 71.06 L-14.78 59.09 L-18.82 57.93 L-22.07 56.77 L-29.60 66.11 L-35.29 63.25 L-32.31 51.63 L-35.80 49.28 L-38.53 47.18 L-48.58 53.72 L-53.11 49.25 L-46.69 39.12 L-49.28 35.80 L-51.22 32.96 L-62.80 36.08 L-65.73 30.43 L-56.49 22.78 L-57.93 18.82 L-58.90 15.52 L-70.88 14.91 L-71.91 8.63 L-60.76 4.21 L-60.91 0.00 L-60.81 -3.44 L-72.02 -7.72 L-71.06 -14.02 L-59.09 -14.78 L-57.93 -18.82 L-56.77 -22.07 L-66.11 -29.60 L-63.25 -35.29 L-51.63 -32.31 L-49.28 -35.80 L-47.18 -38.53 L-53.72 -48.58 L-49.25 -53.11 L-39.12 -46.69 L-35.80 -49.28 L-32.96 -51.22 L-36.08 -62.80 L-30.43 -65.73 L-22.78 -56.49 L-18.82 -57.93 L-15.52 -58.90 L-14.91 -70.88 L-8.63 -71.91 L-4.21 -60.76 L-0.00 -60.91 L3.44 -60.81 L7.72 -72.02 L14.02 -71.06 L14.78 -59.09 L18.82 -57.93 L22.07 -56.77 L29.60 -66.11 L35.29 -63.25 L32.31 -51.63 L35.80 -49.28 L38.53 -47.18 L48.58 -53.72 L53.11 -49.25 L46.69 -39.12 L49.28 -35.80 L51.22 -32.96 L62.80 -36.08 L65.73 -30.43 L56.49 -22.78 L57.93 -18.82 L58.90 -15.52 L70.88 -14.91 L71.91 -8.63 L60.76 -4.21 Z M20.92 4.19 L43.00 8.61 A43.86 43.86 0 0 1 8.61 43.00 L4.19 20.92 A21.33 21.33 0 0 0 20.92 4.19 Z M-4.19 20.92 L-8.61 43.00 A43.86 43.86 0 0 1 -43.00 8.61 L-20.92 4.19 A21.33 21.33 0 0 0 -4.19 20.92 Z M-20.92 -4.19 L-43.00 -8.61 A43.86 43.86 0 0 1 -8.61 -43.00 L-4.19 -20.92 A21.33 21.33 0 0 0 -20.92 -4.19 Z M4.19 -20.92 L8.61 -43.00 A43.86 43.86 0 0 1 43.00 -8.61 L20.92 -4.19 A21.33 21.33 0 0 0 4.19 -20.92 Z M8.00 0 A8.00 8.00 0 1 0 -8.00 0 A8.00 8.00 0 1 0 8.00 0 Z" fill-rule="evenodd"/></svg>
+            <svg class="hero__wheel hero__wheel--c" viewBox="-54 -54 108 108" style="left:60.67%;top:58.06%;width:20.77%;height:25.71%"><path d="M40.91 0.00 L40.78 3.30 L51.82 7.97 L50.41 14.40 L38.43 14.03 L36.86 17.75 L35.31 20.67 L43.23 29.66 L39.17 34.85 L28.54 29.31 L25.51 31.98 L22.84 33.94 L26.08 45.48 L20.17 48.39 L12.99 38.79 L9.10 39.88 L5.86 40.49 L3.76 52.29 L-2.82 52.35 L-5.13 40.59 L-9.10 39.88 L-12.29 39.02 L-19.30 48.75 L-25.26 45.94 L-22.23 34.34 L-25.51 31.98 L-28.00 29.82 L-38.54 35.55 L-42.69 30.44 L-34.93 21.30 L-36.86 17.75 L-38.17 14.72 L-50.15 15.30 L-51.67 8.90 L-40.71 4.03 L-40.91 0.00 L-40.78 -3.30 L-51.82 -7.97 L-50.41 -14.40 L-38.43 -14.03 L-36.86 -17.75 L-35.31 -20.67 L-43.23 -29.66 L-39.17 -34.85 L-28.54 -29.31 L-25.51 -31.98 L-22.84 -33.94 L-26.08 -45.48 L-20.17 -48.39 L-12.99 -38.79 L-9.10 -39.88 L-5.86 -40.49 L-3.76 -52.29 L2.82 -52.35 L5.13 -40.59 L9.10 -39.88 L12.29 -39.02 L19.30 -48.75 L25.26 -45.94 L22.23 -34.34 L25.51 -31.98 L28.00 -29.82 L38.54 -35.55 L42.69 -30.44 L34.93 -21.30 L36.86 -17.75 L38.17 -14.72 L50.15 -15.30 L51.67 -8.90 L40.71 -4.03 Z M8.40 0 A8.40 8.40 0 1 0 -8.40 0 A8.40 8.40 0 1 0 8.40 0 Z" fill-rule="evenodd"/></svg>
+          </div>
+          <p class="hero__eyebrow" data-rise style="--d: 0.1s">
+            <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+            A novel <span class="dot">·</span> Book One
+          </p>
+          <h1 class="hero__title" aria-label="Amelia and the Mirror">
+            <span class="hero__word" data-rise style="--d: 0.3s" aria-hidden="true">Amelia</span>
+            <span class="hero__and" data-rise style="--d: 0.55s" aria-hidden="true"><i></i>and the<i></i></span>
+            <span class="hero__word" data-rise style="--d: 0.7s" aria-hidden="true">Mirror</span>
+          </h1>
+          <p class="hero__sub" data-rise style="--d: 0.95s">The Origin</p>
+          <div class="hero__rule" data-rise style="--d: 1.05s" aria-hidden="true">
+            <i></i><svg class="star"><use href="#star"/></svg><i></i>
+          </div>
+          <p class="hero__blurb" data-rise style="--d: 1.15s">
+            Amelia Forefore, a physicist at Manchester, comes home to Forefore Manor for her mother’s funeral.
+            Eleven feet of the house appear on no plan.
+            <span class="hero__more">Behind them is what her grandfather built, and everyone who has been waiting for it.</span>
+          </p>
+          <div class="hero__actions" data-rise style="--d: 1.35s">
+            <button id="open-book" class="hero__cta" type="button">
+              <svg class="star" aria-hidden="true"><use href="#star"/></svg>
+              Step inside
+            </button>
+            <a class="hero__buy" href="https://books2read.com/u/4D08z7" target="_blank" rel="noopener">Get the book</a>
+            <p class="hero__by"><span>by</span>Priyanshu Sharma</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Out now: the 15 s explainer of the new edition (explainer-reel/, rendered from its seek(t) page).
+       Same player as the edition below; it starts muted, and the Sound button turns its score on. -->
+  <section id="out-now" class="edition edition--flip" data-sc-act="flow" aria-labelledby="out-now-title">
+    <div class="edition__inner">
+      <figure class="edition__reel" data-sc-in>
+        <div class="edition__frame">
+          <video class="edition__video" muted loop playsinline preload="none"
+                 poster="assets/reel/explainer-poster.jpg?v=1"
+                 aria-label="A gold spark floods the screen with the title; ALL NEW, FULL COLOUR and illustrated slam in; a wall of the chapter plates ripples and folds into the cover, and the Amazon link types in">
+            <source src="assets/reel/explainer-720.mp4?v=1" type="video/mp4">
+          </video>
+          <button class="edition__sound" type="button" aria-pressed="false" aria-label="Turn on the sound for the out-now reel">
+            <svg aria-hidden="true" viewBox="0 0 14 12"><path d="M1 4h2.5L7 1v10L3.5 8H1z" fill="currentColor"/><path class="wave" d="M9.5 4l3 4M12.5 4l-3 4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <span>Sound</span>
+          </button>
+          <button class="edition__toggle" type="button" aria-pressed="false" data-label="the out-now reel" aria-label="Play the out-now reel">
+            <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>
+            <span>Play</span>
+          </button>
+        </div>
+        <figcaption>Fifteen seconds of the new edition, with its own score.</figcaption>
+      </figure>
+      <div class="edition__copy" data-sc-stagger="90" data-sc-in>
+        <p class="edition__eyebrow"><svg class="star" aria-hidden="true"><use href="#star"/></svg>Out now</p>
+        <h2 id="out-now-title" class="edition__title" tabindex="-1">All new. Full colour. Illustrated.</h2>
+        <p class="edition__text">The Origin, Book One is out now in a new edition with a complete visual upgrade: a full-colour interior and a new plate at the head of every chapter. Read it today.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="fleuron" aria-hidden="true"><i></i><svg class="star"><use href="#star"/></svg><i></i></div>
+
+  <!-- Inside the edition: the 3D book reel of the colour interior. It plays only while on screen
+       (js/edition.js); with reduced motion it waits for the reader to press play. -->
+  <section id="edition" class="edition" data-sc-act="flow" aria-labelledby="edition-title">
+    <div class="edition__inner">
+      <figure class="edition__reel" data-sc-in>
+        <div class="edition__frame">
+          <video id="edition-video" class="edition__video" muted loop playsinline preload="none"
+                 poster="assets/reel/amelia-3d-book-reel-poster.jpg?v=2"
+                 aria-label="The hardcover opens on a desk and its pages turn to six chapter openers">
+            <source src="assets/reel/amelia-3d-book-reel-720.mp4?v=2" type="video/mp4">
+          </video>
+          <button id="edition-toggle" class="edition__toggle" type="button" aria-pressed="false" data-label="the book reel" aria-label="Play the book reel">
+            <svg aria-hidden="true" viewBox="0 0 10 10"><path d="M2 1l7 4-7 4z" fill="currentColor"/></svg>
+            <span>Play</span>
+          </button>
+        </div>
+        <figcaption>Chapters 1, 4, 10, 15, 21 and 29 of the colour interior.</figcaption>
+      </figure>
+      <div class="edition__copy" data-sc-stagger="90" data-sc-in>
+        <p class="edition__eyebrow"><svg class="star" aria-hidden="true"><use href="#star"/></svg>Inside the edition</p>
+        <h2 id="edition-title" class="edition__title">Every chapter opens on a picture</h2>
+        <p class="edition__text">
+          All thirty-two chapters begin on a full-colour plate in navy and gold: a scene from the chapter,
+          its title in gilt capitals, and where and when it is set. One italic line beneath says what the
+          chapter holds, and the text begins on a gilt initial.
+        </p>
+        <dl class="edition__facts">
+          <div><dt>Chapters</dt><dd>32</dd></div>
+          <div><dt>Pages</dt><dd>646</dd></div>
+          <div><dt>Trim</dt><dd>6 × 9 in</dd></div>
+          <div><dt>Interior</dt><dd>Full colour</dd></div>
+        </dl>
+        <div class="edition__buy">
+          <a class="buy-btn buy-btn--primary" href="https://books2read.com/u/4D08z7" target="_blank" rel="noopener">Get the book <small>All stores</small></a>
+          <a class="buy-btn" data-store="amazon" href="https://amzn.in/d/039Afa9f" target="_blank" rel="noopener">Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="fleuron" aria-hidden="true"><i></i><svg class="star"><use href="#star"/></svg><i></i></div>
+
+</main>
+
+<!-- The colophon: the page ends as the book does. -->
+<footer class="colophon" aria-labelledby="colophon-title">
+  <div class="colophon__device" aria-hidden="true">
+    <svg viewBox="0 0 120 120">
+      <circle class="ring" cx="60" cy="60" r="57"/>
+      <circle class="ticks" cx="60" cy="60" r="51"/>
+      <circle class="ring" cx="60" cy="60" r="44"/>
+      <use href="#star" x="42" y="42" width="36" height="36"/>
+    </svg>
+  </div>
+  <p class="colophon__kicker">Colophon</p>
+  <h2 id="colophon-title" class="colophon__title">Amelia and the Mirror</h2>
+  <p class="colophon__sub">The Origin · Book One · out now</p>
+  <p class="colophon__text">
+    Written by Priyanshu Sharma. Thirty-two chapters across 646 pages, printed six by nine inches
+    with a full-colour interior, and set in TeX Gyre Pagella.
+  </p>
+  <div class="colophon__actions">
+    <a class="buy-btn buy-btn--primary" href="https://books2read.com/u/4D08z7" target="_blank" rel="noopener">Get the book <small>All stores</small></a>
+    <a class="buy-btn" data-store="amazon" href="https://amzn.in/d/039Afa9f" target="_blank" rel="noopener">Amazon</a>
+    <button id="begin-again" class="colophon__again" type="button">
+      <svg viewBox="0 0 10 12" aria-hidden="true"><path d="M5 11V1M1 5l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      Begin again
+    </button>
+  </div>
+  <p class="colophon__fine">
+    The scenes on this page are drawn live in the browser with <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a>.
+    Models, textures and skies are from <a href="https://polyhaven.com" target="_blank" rel="noopener">Poly Haven</a> (CC0).
+  </p>
+  <p class="colophon__copy">© 2026 Priyanshu Sharma</p>
+</footer>
+
+<script src="scrollcraft.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/edition.js"></script>
+</body>
+</html>

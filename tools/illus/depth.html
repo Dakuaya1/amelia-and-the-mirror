@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- Dev only: turns a painting into a transparent, paper-free image and a depth map (Depth
+     Anything V2 Small via transformers.js, fetched from the CDN and Hugging Face at run time). -->
+<html><head><meta charset="utf-8"></head><body>
+<script type="module">
+import { pipeline, RawImage, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@4.3.1';
+env.allowLocalModels = false;
+let lastPct = -10;
+const estimator = await pipeline('depth-estimation', 'onnx-community/depth-anything-v2-small', {
+  dtype: 'fp16', device: 'wasm',
+  progress_callback: (p) => { if (p.status === 'progress' && p.progress - lastPct >= 10) { lastPct = p.progress; console.log(`download ${p.file} ${p.progress.toFixed(0)}%`); } if (p.status === 'ready') console.log('model ready'); },
+});
+
+const load = (url) => new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+function canvasOf(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+
+// The paper: near-white, unsaturated pixels joined to the border. Flood-filled from the edges
+// so white inside the picture (a shirt, a clock face) stays; specks of noise on the paper go too.
+function paperMask(data, w, h) {
+  const white = new Uint8Array(w * h);
+  for (let i = 0; i < w * h; i++) {
+    const r = data[i * 4], g = data[i * 4 + 1], b = data[i * 4 + 2], a = data[i * 4 + 3];
+    const mn = Math.min(r, g, b), mx = Math.max(r, g, b);
+    white[i] = a < 30 || (mn > 205 && mx - mn < 40) ? 1 : 0;
+  }
+  const bg = new Uint8Array(w * h);
+  const stack = [];
+  const push = (x, y) => { const i = y * w + x; if (white[i] && !bg[i]) { bg[i] = 1; stack.push(i); } };
+  for (let x = 0; x < w; x++) { push(x, 0); push(x, h - 1); }
+  for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y); }
+  while (stack.length) {
+    const i = stack.pop(), x = i % w, y = (i / w) | 0;
+    if (x > 0) push(x - 1, y); if (x < w - 1) push(x + 1, y); if (y > 0) push(x, y - 1); if (y < h - 1) push(x, y + 1);
+  }
+  return bg;
+}
+
+// grow (max) then soften a single-channel image: a figure's depth spills a few pixels past its
+// outline, so stretching at the edge pulls background, not the figure
+function dilateBlur(gray, w, h, grow, blurPx) {
+  const out = new Uint8ClampedArray(gray.length);
+  const tmp = new Uint8ClampedArray(gray.length);
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    let m = 0; for (let k = -grow; k <= grow; k++) { const xx = Math.min(w - 1, Math.max(0, x + k)); m = Math.max(m, gray[y * w + xx]); }
+    tmp[y * w + x] = m;
+  }
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    let m = 0; for (let k = -grow; k <= grow; k++) { const yy = Math.min(h - 1, Math.max(0, y + k)); m = Math.max(m, tmp[yy * w + x]); }
+    out[y * w + x] = m;
+  }
+  const c = canvasOf(w, h), g = c.getContext('2d');
+  const id = g.createImageData(w, h);
+  for (let i = 0; i < w * h; i++) { id.data[i * 4] = id.data[i * 4 + 1] = id.data[i * 4 + 2] = out[i]; id.data[i * 4 + 3] = 255; }
+  g.putImageData(id, 0, 0);
+  const c2 = canvasOf(w, h), g2 = c2.getContext('2d');
+  g2.filter = `blur(${blurPx}px)`;
+  g2.drawImage(c, 0, 0);
+  return c2;
+}
+
+window.process = async (url, maxW) => {
+  const img = await load(url);
+  const scale = Math.min(1, maxW / img.width);
+  const w = Math.round(img.width * scale), h = Math.round(img.height * scale);
+  const c = canvasOf(w, h), g = c.getContext('2d');
+  g.drawImage(img, 0, 0, w, h);
+  const id = g.getImageData(0, 0, w, h);
+  const bg = paperMask(id.data, w, h);
+  // the painted area's alpha: hard mask, opened to drop specks, then feathered for a soft deckle
+  const m = new Uint8ClampedArray(w * h);
+  for (let i = 0; i < w * h; i++) m[i] = bg[i] ? 0 : 255;
+  const er = new Uint8ClampedArray(w * h);
+  const R = 3;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    let mn = 255; for (let dy = -R; dy <= R; dy += R) for (let dx = -R; dx <= R; dx += R) { const xx = Math.min(w - 1, Math.max(0, x + dx)), yy = Math.min(h - 1, Math.max(0, y + dy)); mn = Math.min(mn, m[yy * w + xx]); }
+    er[y * w + x] = mn;
+  }
+  const ac = canvasOf(w, h), ag = ac.getContext('2d');
+  const aid = ag.createImageData(w, h);
+  for (let i = 0; i < w * h; i++) { aid.data[i * 4 + 3] = er[i]; }
+  ag.putImageData(aid, 0, 0);
+  const soft = canvasOf(w, h), sg = soft.getContext('2d');
+  sg.filter = 'blur(2.5px)';
+  sg.drawImage(ac, 0, 0);
+  const sa = sg.getImageData(0, 0, w, h).data;
+  let x0 = w, y0 = h, x1 = 0, y1 = 0;
+  for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+    const a = sa[(y * w + x) * 4 + 3];
+    id.data[(y * w + x) * 4 + 3] = a;
+    if (a > 200) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+  }
+  g.putImageData(id, 0, 0);
+  const colour = c.toDataURL('image/webp', 0.86);
+  // depth: near is bright; computed on the painting, then grown and softened
+  const raw = await RawImage.fromURL(url);
+  const { depth } = await estimator(raw);
+  const dc = depth.toCanvas();
+  const dw = Math.round(w / 2), dh = Math.round(h / 2);
+  const small = canvasOf(dw, dh), smg = small.getContext('2d');
+  smg.drawImage(dc, 0, 0, dw, dh);
+  const sd = smg.getImageData(0, 0, dw, dh).data;
+  const gray = new Uint8ClampedArray(dw * dh);
+  for (let i = 0; i < dw * dh; i++) gray[i] = sd[i * 4];
+  const depthCanvas = dilateBlur(gray, dw, dh, 3, 2);
+  return { colour, depth: depthCanvas.toDataURL('image/png'), w, h, box: [x0 / w, y0 / h, x1 / w, y1 / h] };
+};
+window.ready = true;
+</script></body></html>

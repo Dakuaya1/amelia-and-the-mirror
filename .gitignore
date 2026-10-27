@@ -1,0 +1,4 @@
+# installed tools and the build output (Vercel builds it from source: see vercel.json)
+node_modules/
+dist/
+.DS_Store

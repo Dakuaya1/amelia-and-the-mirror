@@ -1,0 +1,13 @@
+{
+  "name": "amelia-and-the-mirror-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Amelia and the Mirror: the scroll-driven book site. npm run build writes the hostable site to ../../dist/amelia-one.",
+  "scripts": {
+    "build": "node tools/build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
